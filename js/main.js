@@ -732,6 +732,14 @@ $(document).ready(function () {
         'speed': 100,
         'justify': 'left'
     });
+    
+    var makeSchoolSelect = function(data) {
+        var html = ''
+        $.each(data, function (index, value) {
+            html += '<option value=' + index + '>' + value.name + '</option>'
+        })
+        $('form#xettuyen select[name=truong]').html(html).prop('disabled', false)
+    }
 
     $('form#xettuyen select[name=tinhthanh]').on('change', function (e) {
         var me = $(this)
@@ -740,11 +748,17 @@ $(document).ready(function () {
         if (pro == "") {
             $('form#xettuyen select[name=truong]').html('<option value="0">Chọn trường</option>').prop('disabled', true)
         } else {
-            var html = ''
-            $.each(truongpt[pro], function (index, value) {
-                html += '<option value=' + index + '>' + value.name + '</option>'
-            })
-            $('form#xettuyen select[name=truong]').html(html).prop('disabled', false)
+            if (typeof truongpt[pro] == 'undefined') {
+                $('form#xettuyen select[name=truong]').html('<option value="0">Đang tải</option>').prop('disabled', true)
+                $('form#xettuyen select[name=tinhthanh]').prop('disabled', true)
+                $.getJSON('data/pt_' + pro + '.json', function(data){
+                    truongpt[pro] = data
+                    makeSchoolSelect(data)
+                    $('form#xettuyen select[name=tinhthanh]').prop('disabled', false)
+                });
+            } else {
+                makeSchoolSelect(truongpt[pro])
+            }
         }
     })
 
