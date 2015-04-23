@@ -1,4 +1,351 @@
+/* from jl temp */
+
+
+header {
+    background-image:url(../img/pattern2.png)
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header .contact {
+    padding-top: 15px;
+}
+
+#yt_menuwrap {
+    background: none repeat scroll 0% 0% #444;
+    position: relative;
+    z-index: 10;
+    height: 54px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+#yt_menuposition ul.navi {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+#yt_menuposition ul.navi>li.level1 {
+    float: left;
+    position: relative;
+    padding: 0;
+    border-right: 1px solid #575757;
+    position: relative
+}
+
+#yt_menuposition ul.navi > li.level1.havechild .level1 {
+    padding: 12px 35px 12px 25px
+}
+#yt_menuposition ul.navi > li.level1 .item-link {
+    margin: 0;
+    line-height: 30px;
+    padding: 12px 35px;
+    color: #fff;
+    font-size: 118%;
+    display: block
+}
+#yt_menuposition ul.navi > li.level1 .showdesc {
+    text-align: center
+}
+#yt_menuposition ul.navi > li.level1 .showdesc span.menu-title {
+    line-height: 100%;
+    padding-bottom: 3px;
+    margin-top: -1px;
+    display: block
+}
+#yt_menuposition ul.navi > li.level1 .showdesc span.menu-desc {
+    display: block;
+    font-size: 11px;
+    color: #ccc;
+    line-height: 100%
+}
+#yt_menuposition ul.navi > li.level1:hover,
+#yt_menuposition ul.navi > li.level1.hover,
+#yt_menuposition ul.navi>li.level1.active {
+    background: #0291ff
+}
+#yt_menuposition ul.navi>li.level1.active {
+    -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3) inset;
+    -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3) inset;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3) inset
+}
+#yt_menuposition ul.navi > li.level1:hover ul.level2,
+#yt_menuposition ul.navi > li.level1.hover ul.level2 {
+    left: 0
+}
+#yt_menuposition ul.navi ul {
+    left: -999em;
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 210px
+}
+#yt_menuposition ul.navi ul.level2 {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 130, 230, 0.9)
+}
+#yt_menuposition ul.navi ul.level2:before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    top: -5px
+}
+#yt_menuposition ul.navi ul.level2 li {
+    position: relative;
+    padding: 1px 0 1px 0
+}
+#yt_menuposition ul.navi ul.level2 li.first {
+    border-top: none
+}
+#yt_menuposition ul.navi ul.level2 li .item-link {
+    display: block;
+    margin: 0;
+    padding: 6px 12px 6px 23px;
+    color: #ddd;
+    font-size: 100%;
+    text-transform: none;
+    line-height: 22px
+}
+
+#yt_menuposition ul.navi ul.level2 li .item-link .menu-title {
+    display: inline-block
+}
+#yt_menuposition ul.navi ul.level2 li .showdesc {
+    text-align: left
+}
+#yt_menuposition ul.navi ul.level2 li .showdesc span.menu-title {
+    padding-bottom: 5px
+}
+#yt_menuposition ul.navi ul.level2 li .showdesc span.menu-desc {
+    font-family: "arial";
+    padding-bottom: 3px
+}
+#yt_menuposition ul.navi ul.level2 li:hover .level2,
+#yt_menuposition ul.navi ul.level2 li.hover .level2,
+#yt_menuposition ul.navi ul.level2 li.active .level2 {
+    color: #fff;
+    background-color: #0066b5;
+    -webkit-box-shadow: 0px 1px 0 rgba(255, 255, 255, 0.2), 0px -1px 0 rgba(0, 0, 0, 0.35), 0px 1px 1px rgba(0, 0, 0, 0.12) inset;
+    -moz-box-shadow: 0px 1px 0 rgba(255, 255, 255, 0.2), 0px -1px 0 rgba(0, 0, 0, 0.35), 0px 1px 1px rgba(0, 0, 0, 0.12) inset;
+    box-shadow: 0px 1px 0 rgba(255, 255, 255, 0.2), 0px -1px 0 rgba(0, 0, 0, 0.35), 0px 1px 1px rgba(0, 0, 0, 0.12) inset
+}
+#yt_menuposition ul.navi ul.level2 li:hover ul.level3,
+#yt_menuposition ul.navi ul.level2 li li.level3:hover ul.level4,
+#yt_menuposition ul.navi ul.level2 li li.level4:hover ul.level5 {
+    left: 100%;
+    top: 0px
+}
+#yt_menuposition ul.navi ul.level2 ul {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 130, 230, 0.9)
+}
+#yt_menuposition ul.navi ul.level2 ul:before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    top: -5px
+}
+#yt_menuposition ul.navi ul.level2 ul li {
+    position: relative;
+    padding: 1px 0 1px 0
+}
+#yt_menuposition ul.navi ul.level2 ul li.first {
+    border-top: none
+}
+#yt_menuposition ul.navi ul.level2 ul li .item-link {
+    display: block;
+    margin: 0;
+    padding: 6px 12px 6px 23px;
+    color: #ddd;
+    font-size: 100%;
+    text-transform: none;
+    line-height: 22px
+}
+#yt_menuposition ul.navi ul.level2 ul li .item-link .menu-title {
+    display: inline-block
+}
+#yt_menuposition ul.navi ul.level2 ul li .showdesc {
+    text-align: left
+}
+#yt_menuposition ul.navi ul.level2 ul li .showdesc span.menu-title {
+    padding-bottom: 5px
+}
+#yt_menuposition ul.navi ul.level2 ul li .showdesc span.menu-desc {
+    font-family: "arial";
+    padding-bottom: 3px
+}
+#yt_menuposition ul.navi ul.level2 ul li:hover .level2,
+#yt_menuposition ul.navi ul.level2 ul li.hover .level2,
+#yt_menuposition ul.navi ul.level2 ul li.active .level2 {
+    color: #fff;
+    background-color: #0066b5
+}
+#yt_menuposition ul.navi ul.level2 ul li:hover ul.level3,
+#yt_menuposition ul.navi ul.level2 ul li li.level3:hover ul.level4,
+#yt_menuposition ul.navi ul.level2 ul li li.level4:hover ul.level5 {
+    left: 100%;
+    top: 0px
+}
+#yt_menuposition ul.navi ul.level2 ul ul.level3 li:hover > .item-link,
+#yt_menuposition ul.navi ul.level2 ul ul.level3 li.hover > .item-link,
+#yt_menuposition ul.navi ul.level2 ul ul.level3 li.active>.item-link {
+    background-color: #0066b5
+}
+#yt_menuposition ul.navi ul.level2 ul.level3 li:hover > .item-link,
+#yt_menuposition ul.navi ul.level2 ul.level3 li.hover > .item-link,
+#yt_menuposition ul.navi ul.level2 ul.level3 li.active>.item-link {
+    background-color: #0066b5;
+    -webkit-box-shadow: 0px 1px 0 rgba(255, 255, 255, 0.2), 0px -1px 0 rgba(0, 0, 0, 0.35), 0px 1px 1px rgba(0, 0, 0, 0.12) inset;
+    -moz-box-shadow: 0px 1px 0 rgba(255, 255, 255, 0.2), 0px -1px 0 rgba(0, 0, 0, 0.35), 0px 1px 1px rgba(0, 0, 0, 0.12) inset;
+    box-shadow: 0px 1px 0 rgba(255, 255, 255, 0.2), 0px -1px 0 rgba(0, 0, 0, 0.35), 0px 1px 1px rgba(0, 0, 0, 0.12) inset
+}
+#yt_menuposition #droplinenavigator {
+    position: relative
+}
+#yt_menuposition #droplinenavigator li.level1 {
+    position: static
+}
+#yt_menuposition #droplinenavigator li.level1.havechild:after {
+    display: none
+}
+#yt_menuposition #droplinenavigator li.level1>.item-link {
+    padding: 12px 35px
+}
+#yt_menuposition #droplinenavigator ul.level2 {
+    margin: 0;
+    width: 100%;
+    padding: 5px
+}
+#yt_menuposition #droplinenavigator ul.level2 li.level2 {
+    float: left;
+    border: none
+}
+#yt_menuposition #droplinenavigator ul.level2 li.level2 a.level2.havechild:after {
+    content: "";
+    display: none
+}
+#yt_menuposition #droplinenavigator ul.level2 li.level2:hover {
+    position: relative
+}
+#yt_menuposition #droplinenavigator ul.level2 li.level2:hover ul.level3 {
+    left: 0;
+    top: 100%
+}
+#yt_menuposition #meganavigator li.level1 .mega-content {
+    position: absolute;
+    left: -999em;
+    z-index: 10;
+    background-color: rgba(0, 130, 230, 0.9);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col {
+    float: left
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col.one div.mega-module {
+    padding: 10px 12px;
+    overflow: hidden
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col.more {
+    margin: 12px 0;
+    padding: 0 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-right: 1px solid #36a7ff
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col.more>ul.subnavi {
+    box-shadow: none;
+    width: auto;
+    background: transparent
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col.more.first {
+    padding-left: 12px
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col.more.last {
+    padding-right: 12px;
+    border-right: none
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col .mega-group {
+    display: block
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col .mega-group div.mega-group-title .item-link {
+    font-size: 150%;
+    padding: 0 10px 10px;
+    background: transparent
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col .mega-group div.mega-group-title .item-link .menu-title {
+    line-height: 100%
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col .mega-group div.mega-group-title .showdesc .menu-title {
+    padding: 0 0 5px
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col .mega-group div.mega-group-title .showdesc .menu-desc {
+    font-family: "arial"
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col .mega-group div.mega-group-content {
+    position: relative;
+    color: #fff;
+    overflow: hidden
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col .mega-group div.mega-group-content ul {
+    position: static;
+    width: auto
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col .mega-group div.mega-group-content a {
+    color: #ddd
+}
+#yt_menuposition #meganavigator li.level1 .mega-content .mega-col .mega-group div.mega-group-content a:hover {
+    color: #fff
+}
+
+.block_component {
+    background: none repeat scroll 0% 0% #FFF;
+    margin-bottom: 30px;
+    margin-top: -1px;
+    border: 1px solid #DDD;
+    padding: 15px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.12);
+}
+
+.poscenter {
+    display: table;
+    margin: 0px auto;
+}
+
+div.yt-socialbt {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+p.bg-in-form {
+    padding: 15px;
+}
+
+form h3 {
+    color: #0083E8;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 10px;
+}
+
 .row_title div {
     text-align: center;
     font-weight: bold;
+}
+
+footer {
+    padding: 15px 0;
+    color: #fff;
+    background-image: url(../img/pattern4.png);
+    background-color: #141414;
+    box-shadow: 0px 1px 16px 2px rgba(0, 0, 0, 0.5) inset, 0px -1px 0px rgba(0, 0, 0, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
