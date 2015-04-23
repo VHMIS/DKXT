@@ -2,137 +2,162 @@
 jQuery.easing['jswing'] = jQuery.easing['swing'];
 jQuery.extend(jQuery.easing, {
     def: 'easeOutQuad',
-    swing: function(x, t, b, c, d) {
+    swing: function (x, t, b, c, d) {
         return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
     },
-    easeInQuad: function(x, t, b, c, d) {
+    easeInQuad: function (x, t, b, c, d) {
         return c * (t /= d) * t + b;
     },
-    easeOutQuad: function(x, t, b, c, d) {
+    easeOutQuad: function (x, t, b, c, d) {
         return -c * (t /= d) * (t - 2) + b;
     },
-    easeInOutQuad: function(x, t, b, c, d) {
-        if ((t /= d / 2) < 1) return c / 2 * t * t + b;
+    easeInOutQuad: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1)
+            return c / 2 * t * t + b;
         return -c / 2 * ((--t) * (t - 2) - 1) + b;
     },
-    easeInCubic: function(x, t, b, c, d) {
+    easeInCubic: function (x, t, b, c, d) {
         return c * (t /= d) * t * t + b;
     },
-    easeOutCubic: function(x, t, b, c, d) {
+    easeOutCubic: function (x, t, b, c, d) {
         return c * ((t = t / d - 1) * t * t + 1) + b;
     },
-    easeInOutCubic: function(x, t, b, c, d) {
-        if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
+    easeInOutCubic: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1)
+            return c / 2 * t * t * t + b;
         return c / 2 * ((t -= 2) * t * t + 2) + b;
     },
-    easeInQuart: function(x, t, b, c, d) {
+    easeInQuart: function (x, t, b, c, d) {
         return c * (t /= d) * t * t * t + b;
     },
-    easeOutQuart: function(x, t, b, c, d) {
+    easeOutQuart: function (x, t, b, c, d) {
         return -c * ((t = t / d - 1) * t * t * t - 1) + b;
     },
-    easeInOutQuart: function(x, t, b, c, d) {
-        if ((t /= d / 2) < 1) return c / 2 * t * t * t * t + b;
+    easeInOutQuart: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1)
+            return c / 2 * t * t * t * t + b;
         return -c / 2 * ((t -= 2) * t * t * t - 2) + b;
     },
-    easeInQuint: function(x, t, b, c, d) {
+    easeInQuint: function (x, t, b, c, d) {
         return c * (t /= d) * t * t * t * t + b;
     },
-    easeOutQuint: function(x, t, b, c, d) {
+    easeOutQuint: function (x, t, b, c, d) {
         return c * ((t = t / d - 1) * t * t * t * t + 1) + b;
     },
-    easeInOutQuint: function(x, t, b, c, d) {
-        if ((t /= d / 2) < 1) return c / 2 * t * t * t * t * t + b;
+    easeInOutQuint: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1)
+            return c / 2 * t * t * t * t * t + b;
         return c / 2 * ((t -= 2) * t * t * t * t + 2) + b;
     },
-    easeInSine: function(x, t, b, c, d) {
+    easeInSine: function (x, t, b, c, d) {
         return -c * Math.cos(t / d * (Math.PI / 2)) + c + b;
     },
-    easeOutSine: function(x, t, b, c, d) {
+    easeOutSine: function (x, t, b, c, d) {
         return c * Math.sin(t / d * (Math.PI / 2)) + b;
     },
-    easeInOutSine: function(x, t, b, c, d) {
+    easeInOutSine: function (x, t, b, c, d) {
         return -c / 2 * (Math.cos(Math.PI * t / d) - 1) + b;
     },
-    easeInExpo: function(x, t, b, c, d) {
+    easeInExpo: function (x, t, b, c, d) {
         return (t == 0) ? b : c * Math.pow(2, 10 * (t / d - 1)) + b;
     },
-    easeOutExpo: function(x, t, b, c, d) {
+    easeOutExpo: function (x, t, b, c, d) {
         return (t == d) ? b + c : c * (-Math.pow(2, -10 * t / d) + 1) + b;
     },
-    easeInOutExpo: function(x, t, b, c, d) {
-        if (t == 0) return b;
-        if (t == d) return b + c;
-        if ((t /= d / 2) < 1) return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
+    easeInOutExpo: function (x, t, b, c, d) {
+        if (t == 0)
+            return b;
+        if (t == d)
+            return b + c;
+        if ((t /= d / 2) < 1)
+            return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
         return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
     },
-    easeInCirc: function(x, t, b, c, d) {
+    easeInCirc: function (x, t, b, c, d) {
         return -c * (Math.sqrt(1 - (t /= d) * t) - 1) + b;
     },
-    easeOutCirc: function(x, t, b, c, d) {
+    easeOutCirc: function (x, t, b, c, d) {
         return c * Math.sqrt(1 - (t = t / d - 1) * t) + b;
     },
-    easeInOutCirc: function(x, t, b, c, d) {
-        if ((t /= d / 2) < 1) return -c / 2 * (Math.sqrt(1 - t * t) - 1) + b;
+    easeInOutCirc: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1)
+            return -c / 2 * (Math.sqrt(1 - t * t) - 1) + b;
         return c / 2 * (Math.sqrt(1 - (t -= 2) * t) + 1) + b;
     },
-    easeInElastic: function(x, t, b, c, d) {
+    easeInElastic: function (x, t, b, c, d) {
         var s = 1.70158;
         var p = 0;
         var a = c;
-        if (t == 0) return b;
-        if ((t /= d) == 1) return b + c;
-        if (!p) p = d * .3;
+        if (t == 0)
+            return b;
+        if ((t /= d) == 1)
+            return b + c;
+        if (!p)
+            p = d * .3;
         if (a < Math.abs(c)) {
             a = c;
             var s = p / 4;
-        } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+        } else
+            var s = p / (2 * Math.PI) * Math.asin(c / a);
         return -(a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
     },
-    easeOutElastic: function(x, t, b, c, d) {
+    easeOutElastic: function (x, t, b, c, d) {
         var s = 1.70158;
         var p = 0;
         var a = c;
-        if (t == 0) return b;
-        if ((t /= d) == 1) return b + c;
-        if (!p) p = d * .3;
+        if (t == 0)
+            return b;
+        if ((t /= d) == 1)
+            return b + c;
+        if (!p)
+            p = d * .3;
         if (a < Math.abs(c)) {
             a = c;
             var s = p / 4;
-        } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+        } else
+            var s = p / (2 * Math.PI) * Math.asin(c / a);
         return a * Math.pow(2, -10 * t) * Math.sin((t * d - s) * (2 * Math.PI) / p) + c + b;
     },
-    easeInOutElastic: function(x, t, b, c, d) {
+    easeInOutElastic: function (x, t, b, c, d) {
         var s = 1.70158;
         var p = 0;
         var a = c;
-        if (t == 0) return b;
-        if ((t /= d / 2) == 2) return b + c;
-        if (!p) p = d * (.3 * 1.5);
+        if (t == 0)
+            return b;
+        if ((t /= d / 2) == 2)
+            return b + c;
+        if (!p)
+            p = d * (.3 * 1.5);
         if (a < Math.abs(c)) {
             a = c;
             var s = p / 4;
-        } else var s = p / (2 * Math.PI) * Math.asin(c / a);
-        if (t < 1) return -.5 * (a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
+        } else
+            var s = p / (2 * Math.PI) * Math.asin(c / a);
+        if (t < 1)
+            return -.5 * (a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
         return a * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p) * .5 + c + b;
     },
-    easeInBack: function(x, t, b, c, d, s) {
-        if (s == undefined) s = 1.70158;
+    easeInBack: function (x, t, b, c, d, s) {
+        if (s == undefined)
+            s = 1.70158;
         return c * (t /= d) * t * ((s + 1) * t - s) + b;
     },
-    easeOutBack: function(x, t, b, c, d, s) {
-        if (s == undefined) s = 1.70158;
+    easeOutBack: function (x, t, b, c, d, s) {
+        if (s == undefined)
+            s = 1.70158;
         return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;
     },
-    easeInOutBack: function(x, t, b, c, d, s) {
-        if (s == undefined) s = 1.70158;
-        if ((t /= d / 2) < 1) return c / 2 * (t * t * (((s *= (1.525)) + 1) * t - s)) + b;
+    easeInOutBack: function (x, t, b, c, d, s) {
+        if (s == undefined)
+            s = 1.70158;
+        if ((t /= d / 2) < 1)
+            return c / 2 * (t * t * (((s *= (1.525)) + 1) * t - s)) + b;
         return c / 2 * ((t -= 2) * t * (((s *= (1.525)) + 1) * t + s) + 2) + b;
     },
-    easeInBounce: function(x, t, b, c, d) {
+    easeInBounce: function (x, t, b, c, d) {
         return c - jQuery.easing.easeOutBounce(x, d - t, 0, c, d) + b;
     },
-    easeOutBounce: function(x, t, b, c, d) {
+    easeOutBounce: function (x, t, b, c, d) {
         if ((t /= d) < (1 / 2.75)) {
             return c * (7.5625 * t * t) + b;
         } else if (t < (2 / 2.75)) {
@@ -143,8 +168,9 @@ jQuery.extend(jQuery.easing, {
             return c * (7.5625 * (t -= (2.625 / 2.75)) * t + .984375) + b;
         }
     },
-    easeInOutBounce: function(x, t, b, c, d) {
-        if (t < d / 2) return jQuery.easing.easeInBounce(x, t * 2, 0, c, d) * .5 + b;
+    easeInOutBounce: function (x, t, b, c, d) {
+        if (t < d / 2)
+            return jQuery.easing.easeInBounce(x, t * 2, 0, c, d) * .5 + b;
         return jQuery.easing.easeOutBounce(x, t * 2 - d, 0, c, d) * .5 + c * .5 + b;
     }
 });
@@ -320,12 +346,218 @@ $(document).ready(function () {
         }
     }
 
+    var truongpt = {
+        dn: {
+            385: {"name": "Dân Lập Hermann Gmeiner", "value": "385"},
+            374: {"name": "THPT Chuyên Lê Quý Đôn", "value": "374"},
+            389: {"name": "THPT Hòa Vang", "value": "389"},
+            379: {"name": "THPT Hoàng Hoa Thám", "value": "379"},
+            380: {"name": "THPT Ngô Quyền", "value": "380"},
+            383: {"name": "THPT Ngũ Hành Sơn", "value": "383"},
+            370: {"name": "THPT Nguyễn Hiền", "value": "370"},
+            395: {"name": "THPT Nguyễn Thượng Hiền", "value": "395"},
+            386: {"name": "THPT Nguyễn Trãi", "value": "386"},
+            391: {"name": "THPT Ông ích Khiêm", "value": "391"},
+            392: {"name": "THPT Phạm Phú Thứ", "value": "392"},
+            371: {"name": "THPT Phan Châu Trinh", "value": "371"},
+            390: {"name": "THPT Phan Thành Tài", "value": "390"},
+            376: {"name": "THPT Thái Phiên", "value": "376"},
+            397: {"name": "THPT Thanh Khê", "value": "397"},
+            396: {"name": "THPT Tôn Thất Tùng", "value": "396"},
+            372: {"name": "THPT Trần Phú", "value": "372"},
+            373: {"name": "THPT TT Diên Hồng", "value": "373"},
+            387: {"name": "THPT TT Khai Trí", "value": "387"},
+            378: {"name": "THPT TT Quang Trung", "value": "378"},
+            388: {"name": "TT GDTX - HN Liên Chiểu", "value": "388"},
+            381: {"name": "TT GDTX Thành Phố", "value": "381"},
+            393: {"name": "TT GDTX-HN Cẩm Lệ", "value": "393"},
+            394: {"name": "TT GDTX-HN Hòa Vang", "value": "394"},
+            384: {"name": "TT GDTX-HN N.H.Sơn + BT Đại học Kinh tế", "value": "384"},
+            377: {"name": "TT GDTX-HN Thanh Khê", "value": "377"},
+            382: {"name": "TT KTTH-HN Sơn Trà", "value": "382"},
+            375: {"name": "TTGDTX-HN H.Châu +BTBK+ CĐCN+ THPT TT Hồng Đức", "value": "375"}
+        },
+        qn: {
+            1987: {"name": "PT DT Nội trú Nước Oa", "value": "1987"},
+            3499: {"name": "PTDT Nội trú Nước Oa", "value": "3499"},
+            1939: {"name": "PTDT Nội trú tỉnh Quảng Nam", "value": "1939"},
+            1942: {"name": "THPT Lê Hồng Phong", "value": "1942"},
+            1932: {"name": "THPT Lê Quý Đôn", "value": "1932"},
+            1948: {"name": "THPT Lương Thế Vinh", "value": "1948"},
+            1954: {"name": "THPT Lương Thúc Kỳ", "value": "1954"},
+            1945: {"name": "THPT Nguyễn Duy Hiệu", "value": "1945"},
+            1944: {"name": "THPT Nguyễn Hiền", "value": "1944"},
+            1972: {"name": "THPT Nguyễn Huệ", "value": "1972"},
+            1949: {"name": "THPT Nguyễn Khuyến", "value": "1949"},
+            1940: {"name": "THPT NguyễnTrãi", "value": "1940"},
+            1947: {"name": "THPT Phạm Phú Thứ", "value": "1947"},
+            1975: {"name": "THPT Phan Châu Trinh", "value": "1975"},
+            1931: {"name": "THPT Trần Cao Vân", "value": "1931"},
+            1960: {"name": "THPT Trần Đại Nghĩa", "value": "1960"},
+            1937: {"name": "THPT Trần Quý Cáp", "value": "1937"},
+            1977: {"name": "THPT Bắc Trà My", "value": "1977"},
+            1971: {"name": "THPT Cao Bá Quát", "value": "1971"},
+            1952: {"name": "THPT Chu Văn An", "value": "1952"},
+            1935: {"name": "THPT Chuyên Nguyễn Bỉnh Khiêm", "value": "1935"},
+            1933: {"name": "THPT DL Hà Huy Tập", "value": "1933"},
+            1962: {"name": "THPT DL Phạm Văn Đồng", "value": "1962"},
+            1953: {"name": "THPT Đỗ Đăng Tuyển", "value": "1953"},
+            1963: {"name": "THPT Hiệp Đức", "value": "1963"},
+            1946: {"name": "THPT Hoàng Diệu", "value": "1946"},
+            1951: {"name": "THPT Huỳnh Ngọc Huệ", "value": "1951"},
+            1974: {"name": "THPT Huỳnh Thúc Kháng", "value": "1974"},
+            1981: {"name": "THPT Khâm Đức", "value": "1981"},
+            1968: {"name": "THPT Lý Tự Trọng", "value": "1968"},
+            1980: {"name": "THPT Nam Giang", "value": "1980"},
+            1984: {"name": "THPT Nam Trà My", "value": "1984"},
+            1986: {"name": "THPT Nguyễn Dục", "value": "1986"},
+            3498: {"name": "THPT Nguyễn Dục", "value": "3498"},
+            1966: {"name": "THPT Nguyễn Thái Bình", "value": "1966"},
+            1958: {"name": "THPT Nguyễn Văn Cừ", "value": "1958"},
+            1959: {"name": "THPT Nông Sơn", "value": "1959"},
+            1970: {"name": "THPT Núi Thành", "value": "1970"},
+            1930: {"name": "THPT Phan Bội Châu", "value": "1930"},
+            1979: {"name": "THPT Quang Trung", "value": "1979"},
+            1957: {"name": "THPT Quế Sơn", "value": "1957"},
+            1941: {"name": "THPT Sào Nam", "value": "1941"},
+            1985: {"name": "THPT Tây Giang", "value": "1985"},
+            1967: {"name": "THPT Thái Phiên", "value": "1967"},
+            1965: {"name": "THPT Tiểu La", "value": "1965"},
+            1982: {"name": "THPT Trần Văn Dư", "value": "1982"},
+            1934: {"name": "TT. GDTX tỉnh Quảng Nam", "value": "1934"},
+            1955: {"name": "TT. GDTX-HN Đại Lộc", "value": "1955"},
+            1950: {"name": "TT. GDTX-HN Điện Bàn", "value": "1950"},
+            1943: {"name": "TT. GDTX-HN Duy Xuyên", "value": "1943"},
+            1973: {"name": "TT. GDTX-HN Núi Thành", "value": "1973"},
+            1961: {"name": "TT. GDTX-HN Quế Sơn", "value": "1961"},
+            1976: {"name": "TT. GDTX-HN Tiên Phước", "value": "1976"},
+            1978: {"name": "TT. GDTX-HN Bắc Trà My", "value": "1978"},
+            1964: {"name": "TT. GDTX-HN Hiệp Đức", "value": "1964"},
+            1936: {"name": "TT. GDTX-HN Hội An", "value": "1936"},
+            1983: {"name": "TT. GDTX-HN Phú Ninh", "value": "1983"},
+            1969: {"name": "TT. GDTX-HN Thăng Bình", "value": "1969"},
+            3487: {"name": "TT.GDTX Nam Giang", "value": "3497"}
+        },
+        qt: {
+            1876: {"name": "THPT A Túc", "value": "1876"},
+            1861: {"name": "THPT Bến Quan", "value": "1861"},
+            1846: {"name": "THPT Cam Lộ", "value": "1846"},
+            3494: {"name": "THPT Chế Lan Viên", "value": "3494"},
+            1836: {"name": "THPT Chu Văn An", "value": "1836"},
+            1839: {"name": "THPT Chuyên Lê Quý Đôn", "value": "1839"},
+            1854: {"name": "THPT Cồn Tiên", "value": "1854"},
+            1859: {"name": "THPT Cửa Tùng", "value": "1859"},
+            1852: {"name": "THPT Đakrông", "value": "1852"},
+            1840: {"name": "THPT Đông Hà", "value": "1840"},
+            1832: {"name": "THPT DT Nội Trú Tỉnh", "value": "1832"},
+            1855: {"name": "THPT Gio Linh", "value": "1855"},
+            1827: {"name": "THPT Hải Lăng", "value": "1827"},
+            1849: {"name": "THPT Hướng Hoá", "value": "1849"},
+            1874: {"name": "THPT Hướng Phùng", "value": "1874"},
+            1850: {"name": "THPT Lao Bảo", "value": "1850"},
+            1841: {"name": "THPT Lê Lợi Đông Hà", "value": "1841"},
+            1847: {"name": "THPT Lê Thế Hiếu", "value": "1847"},
+            1826: {"name": "THPT Nam Hải Lăng", "value": "1826"},
+            1829: {"name": "THPT Nguyễn Bỉnh Khiêm", "value": "1829"},
+            1860: {"name": "THPT Nguyễn Công Trứ", "value": "1860"},
+            1856: {"name": "THPT Nguyễn Du", "value": "1856"},
+            1833: {"name": "THPT Nguyễn Huệ", "value": "1833"},
+            1877: {"name": "THPT Nguyễn Hữu Thận", "value": "1877"},
+            1842: {"name": "THPT Phan Châu Trinh", "value": "1842"},
+            1875: {"name": "THPT Số 2 Đakrông", "value": "1875"},
+            1845: {"name": "THPT Tân Lâm", "value": "1845"},
+            1828: {"name": "THPT Trần Thị Tâm", "value": "1828"},
+            1835: {"name": "THPT Triệu Phong", "value": "1835"},
+            1831: {"name": "THPT TX Quảng Trị", "value": "1831"},
+            1837: {"name": "THPT Vĩnh Định", "value": "1837"},
+            1858: {"name": "THPT Vĩnh Linh", "value": "1858"},
+            1865: {"name": "TTGDTX Cam Lộ", "value": "1865"},
+            1864: {"name": "TTGDTX ĐakRông", "value": "1864"},
+            1866: {"name": "TTGDTX Đông Hà", "value": "1866"},
+            1873: {"name": "TTGDTX Gio Linh", "value": "1870"},
+            1867: {"name": "TTGDTX Hải Lăng", "value": "1867"},
+            1863: {"name": "TTGDTX Hướng Hoá", "value": "1863"},
+            1869: {"name": "TTGDTX Triệu Phong", "value": "1869"},
+            1868: {"name": "TTGDTX TX Quảng trị", "value": "1868"},
+            1871: {"name": "TTGDTX Vĩnh Linh", "value": "1871"},
+            1843: {"name": "TTKTTH-HN tỉnh", "value": "1843"},
+            1872: {"name": "TTKTTH-HN TX Quảng trị", "value": "1872"},
+            1873: {"name": "TTKTTH-HN Vĩnh Linh", "value": "1873"}
+        },
+        hue: {
+            1887: {"name": "(Khối chuyên ĐHKH Huế)", "value": "(1887)"},
+            1912: {"name": "(Khối chuyên ĐHNN Huế)", "value": "(1912)"},
+            1901: {"name": "(THPT A Lưới)", "value": "(1901)"},
+            1897: {"name": "(THPT An Lương Đông)", "value": "(1897)"},
+            1883: {"name": "(THPT BC Đống Đa ( TT KTTH -HN Huế ))", "value": "(1883)"},
+            1907: {"name": "(THPT Bình Điền)", "value": "(1907)"},
+            1882: {"name": "(THPT Bùi Thị Xuân)", "value": "(1882)"},
+            1918: {"name": "(THPT Cao Thắng)", "value": "(1918)"},
+            1878: {"name": "(THPT chuyên Quốc Học)", "value": "(1878)"},
+            1902: {"name": "(THPT Dân tộc Nội trú Tỉnh)", "value": "(1902)"},
+            1892: {"name": "(THPT Đặng Huy Trứ)", "value": "(1892)"},
+            1906: {"name": "(THPT Đặng Trần Côn)", "value": "(1906)"},
+            1914: {"name": "(THPT DL Trần Hưng Đạo)", "value": "(1914)"},
+            1881: {"name": "(THPT Gia Hội)", "value": "(1881)"},
+            1923: {"name": "(THPT Hà Trung)", "value": "(1923)"},
+            1879: {"name": "(THPT Hai Bà Trưng)", "value": "(1879)"},
+            1885: {"name": "(THPT Hoá Châu)", "value": "(1885)"},
+            1916: {"name": "(THPT Hồng Vân)", "value": "(1916)"},
+            1919: {"name": "(THPT Hương Giang)", "value": "(1919)"},
+            1915: {"name": "(THPT Hương Lâm)", "value": "(1915)"},
+            1895: {"name": "(THPT Hương Thủy)", "value": "(1895)"},
+            1917: {"name": "(THPT Hương Trà)", "value": "(1917)"},
+            1904: {"name": "(THPT Hương Vinh)", "value": "(1904)"},
+            1900: {"name": "(THPT Nam Đông)", "value": "(1900)"},
+            1891: {"name": "(THPT Nguyễn Chí Thanh)", "value": "(1891)"},
+            1890: {"name": "(THPT Nguyễn Đình Chiểu)", "value": "(1890)"},
+            1880: {"name": "(THPT Nguyễn Huệ)", "value": "(1880)"},
+            1894: {"name": "(THPT Nguyễn Sinh Cung)", "value": "(1894)"},
+            1922: {"name": "(THPT Nguyễn Trãi)", "value": "(1922)"},
+            1884: {"name": "(THPT Nguyễn Trường Tộ)", "value": "(1884)"},
+            1893: {"name": "(THPT Phan Đăng Lưu)", "value": "(1893)"},
+            1888: {"name": "(THPT Phong Điền)", "value": "(1888)"},
+            1896: {"name": "(THPT Phú Bài)", "value": "(1896)"},
+            1899: {"name": "(THPT Phú Lộc)", "value": "(1899)"},
+            1889: {"name": "(THPT Tam Giang)", "value": "(1889)"},
+            1903: {"name": "(THPT Thừa Lưu)", "value": "(1903)"},
+            1911: {"name": "(THPT Thuận An)", "value": "(1911)"},
+            1920: {"name": "(THPT Tố Hữu)", "value": "(1920)"},
+            1913: {"name": "(THPT Trần Văn Kỷ)", "value": "(1913)"},
+            1921: {"name": "(THPT TT Thế hệ Mới)", "value": "(1921)"},
+            1898: {"name": "(THPT Vinh Lộc)", "value": "(1898)"},
+            1908: {"name": "(THPT Vinh Xuân)", "value": "(1908)"},
+            1910: {"name": "(Tr ĐH Nghệ thuật-Huế (hệ TC))", "value": "(1910)"},
+            1909: {"name": "(Trung cấp Phật Học Huế)", "value": "(1909)"},
+            1886: {"name": "(TT GDTX TP Huế)", "value": "(1886)"},
+            1927: {"name": "(TTGDTX Hương Thủy)", "value": "(1927)"},
+            1926: {"name": "(TTGDTX Phú Vang)", "value": "(1926)"},
+            1925: {"name": "TTGDTX Quảng Điền", "value": "1925"}
+        }
+    }
+
+    // Menu
     $('#meganavigator').megamenu({
         'wrap': '#yt_menuwrap .container',
         'easing': 'easeInOutCirc',
         'speed': 100,
         'justify': 'left'
     });
+
+    $('form#xettuyen select[name=tinhthanh]').on('change', function (e) {
+        var me = $(this)
+        var pro = me.val();
+
+        if (pro == "") {
+            $('form#xettuyen select[name=truong]').html('<option value="0">Chọn trường</option>').prop('disabled', true)
+        } else {
+            var html = ''
+            $.each(truongpt[pro], function (index, value) {
+                html += '<option value=' + index + '>' + value.name + '</option>'
+            })
+            $('form#xettuyen select[name=truong]').html(html).prop('disabled', false)
+        }
+    })
 
     $('form#xettuyen select[name=nhommon]').on('change', function (e) {
         var me = $(this)
