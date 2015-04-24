@@ -171,17 +171,17 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label">Họ và tên</label>
                             <div class="col-md-9">
-                                <input type="email" class="form-control" name="ten" placeholder="Họ, tên đệm và tên">
+                                <input type="text" class="form-control" name="name" placeholder="Họ, tên đệm và tên">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Giới tính</label>
                             <div class="col-md-9">
                                 <label class="radio-inline">
-                                    <input type="radio" name="gioitinh" value="1" checked="checked"> Nam
+                                    <input type="radio" name="gender" value="1" checked="checked"> Nam
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="gioitinh" value="2" checked="checked"> Nữ
+                                    <input type="radio" name="gender" value="2" checked="checked"> Nữ
                                 </label>
                             </div>
                         </div>
@@ -195,7 +195,7 @@
                             <label class="col-md-3 control-label">Thông tin liên lạc</label>
                             <div class="row">
                                 <div class="col-md-2">
-                                    <input type="text" class="form-control" name="sodienthoai" placeholder="Số điện thoại">
+                                    <input type="text" class="form-control" name="tel" placeholder="Số điện thoại">
                                 </div>
                                 <div class="col-md-3">
                                     <input type="text" class="form-control" name="email" placeholder="Email">
@@ -212,7 +212,7 @@
                             <label class="col-md-3 control-label">Trường</label>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <select name="tinhthanh" class="form-control">
+                                    <select name="province" class="form-control">
                                         <option value="">Chọn Tỉnh thành</option>
                                         <option value="dn">Tp Đà Nẵng</option>
                                         <option value="qn">Quảng Nam</option>
@@ -229,7 +229,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-4">
-                                    <select name="truong" class="form-control" disabled>
+                                    <select name="school" class="form-control" disabled>
                                         <option>Chọn trường</option>
                                     </select>
                                 </div>
@@ -239,7 +239,7 @@
                             <label class="col-md-3 control-label">Đối tượng</label>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <select name="khucvuc" class="form-control">
+                                    <select name="object_area" class="form-control">
                                         <option value="1">Khu vực 1</option>
                                         <option value="2">Khu vực 2</option>
                                         <option value="3">Khu vực 2 - Nông thôn</option>
@@ -247,7 +247,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-4">
-                                    <select name="uutien" class="form-control">
+                                    <select name="object_priority" class="form-control">
                                         <option value="8">0 - Không ưu tiên</option>
                                         <option value="1">1 - Dân tộc thiểu </option>
                                         <option value="2">2 - CSƯT, Chiến sĩ thi đua</option>
@@ -266,17 +266,17 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <select name="bachoc" class="form-control">
-                                        <option>Chọn Bậc học</option>
-                                        <option>Cao đẳng</option>
-                                        <option>Trung cấp</option>
+                                        <option value="0">Chọn Bậc học</option>
+                                        <option value="1">Cao đẳng</option>
+                                        <option value="2">Trung cấp</option>
                                     </select>
                                 </div>
                                 <div class="col-md-4">
-                                    <select name="nganhhoc" class="form-control">
-                                        <option>Chọn ngành học</option>
-                                        <option>Khoa học máy tính</option>
-                                        <option>Thương mại điện tử</option>
-                                        <option>Tin ứng dụng</option>
+                                    <select name="applied_major" class="form-control">
+                                        <option value="0">Chọn ngành học</option>
+                                        <option value="1">Khoa học máy tính</option>
+                                        <option value="2">Thương mại điện tử</option>
+                                        <option value="3">Tin ứng dụng</option>
                                     </select>
                                 </div>
                             </div>
@@ -285,7 +285,7 @@
                             <label class="col-md-3 control-label">Nhóm môn xét tuyển</label>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <select name="nhommon" class="form-control">
+                                    <select name="subject_combination" class="form-control">
                                         <option value="0">Chọn nhóm môn</option>
                                         <option value="1">Toán - Lý - Hóa</option>
                                         <option value="2">Toán - Lý - Ngoại ngữ</option>
@@ -334,81 +334,81 @@
                             </div>
                         </div>
                         
-                        <div class="form-group sub_1_form">
+                        <div class="form-group sub1_form">
                             <label class="col-md-3 control-label">Điểm Môn 1</label>
                             <div class="row">
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_1_hk_1_10" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub1_t1_k10" disabled>
                                 </div>
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_1_hk_2_10" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub1_t2_k10" disabled>
                                 </div>
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_1_hk_1_11" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub1_t1_k11" disabled>
                                 </div>
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_1_hk_2_11" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub1_t2_k11" disabled>
                                 </div>
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_1_hk_1_12" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub1_t1_k12" disabled>
                                 </div>
                                 <div class="col-md-1">
                                     &nbsp;
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="text" class="form-control ketqua" name="sub_1_avg" readonly>
+                                    <input type="text" class="form-control ketqua" name="sub1_avg" readonly>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group sub_2_form">
+                        <div class="form-group sub2_form">
                             <label class="col-md-3 control-label">Điểm Môn 2</label>
                             <div class="row">
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_2_hk_1_10" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub2_t1_k10" disabled>
                                 </div>
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_2_hk_2_10" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub2_t2_k10" disabled>
                                 </div>
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_2_hk_1_11" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub2_t1_k11" disabled>
                                 </div>
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_2_hk_2_11" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub2_t2_k11" disabled>
                                 </div>
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_2_hk_1_12" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub2_t1_k12" disabled>
                                 </div>
                                 <div class="col-md-1">
                                     &nbsp;
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="text" class="form-control ketqua" name="sub_2_avg" readonly>
+                                    <input type="text" class="form-control ketqua" name="sub2_avg" readonly>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group sub_3_form">
+                        <div class="form-group sub3_form">
                             <label class="col-md-3 control-label">Điểm Môn 3</label>
                             <div class="row">
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_3_hk_1_10" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub3_t1_k10" disabled>
                                 </div>
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_3_hk_2_10" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub3_t2_k10" disabled>
                                 </div>
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_3_hk_1_11" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub3_t1_k11" disabled>
                                 </div>
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_3_hk_2_11" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub3_t2_k11" disabled>
                                 </div>
                                 <div class="col-md-1">
-                                    <input type="text" class="form-control nhapdiemform" name="sub_3_hk_1_12" disabled>
+                                    <input type="text" class="form-control nhapdiemform" name="sub3_t1_k12" disabled>
                                 </div>
                                 <div class="col-md-1">
                                     &nbsp;
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="text" class="form-control ketqua" name="sub_3_avg" readonly>
+                                    <input type="text" class="form-control ketqua" name="sub3_avg" readonly>
                                 </div>
                             </div>
                         </div>
@@ -416,27 +416,27 @@
                             <label class="col-md-3 control-label">Hạnh kiểm</label>
                             <div class="row">
                                 <div class="col-md-2">
-                                    <select name="hk_10" class="form-control">
+                                    <select name="conduct_k10" class="form-control">
                                         <option value="1">Tốt</option>
                                         <option value="2">Khá</option>
-                                        <option value="2">Trung bình</option>
-                                        <option value="2">Yếu</option>
+                                        <option value="3">Trung bình</option>
+                                        <option value="4">Yếu</option>
                                     </select>
                                 </div>
                                 <div class="col-md-2">
-                                    <select name="hk_11" class="form-control">
+                                    <select name="conduct_k11" class="form-control">
                                         <option value="1">Tốt</option>
                                         <option value="2">Khá</option>
-                                        <option value="2">Trung bình</option>
-                                        <option value="2">Yếu</option>
+                                        <option value="3">Trung bình</option>
+                                        <option value="4">Yếu</option>
                                     </select>
                                 </div>
                                 <div class="col-md-2">
-                                    <select name="hk_12" class="form-control">
+                                    <select name="conduct_k12" class="form-control">
                                         <option value="1">Tốt</option>
                                         <option value="2">Khá</option>
-                                        <option value="2">Trung bình</option>
-                                        <option value="2">Yếu</option>
+                                        <option value="3">Trung bình</option>
+                                        <option value="4">Yếu</option>
                                     </select>
                                 </div>
                             </div>

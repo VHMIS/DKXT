@@ -736,25 +736,25 @@ $(document).ready(function () {
     var makeSchoolSelect = function(data) {
         var html = ''
         $.each(data, function (index, value) {
-            html += '<option value=' + index + '>' + value.name + '</option>'
+            html += '<option value=' + value.name + '>' + value.name + '</option>'
         })
-        $('form#xettuyen select[name=truong]').html(html).prop('disabled', false)
+        $('form#xettuyen select[name=school]').html(html).prop('disabled', false)
     }
 
-    $('form#xettuyen select[name=tinhthanh]').on('change', function (e) {
+    $('form#xettuyen select[name=province]').on('change', function (e) {
         var me = $(this)
         var pro = me.val();
 
         if (pro == "") {
-            $('form#xettuyen select[name=truong]').html('<option value="0">Chọn trường</option>').prop('disabled', true)
+            $('form#xettuyen select[name=school]').html('<option value="0">Chọn trường</option>').prop('disabled', true)
         } else {
             if (typeof truongpt[pro] == 'undefined') {
-                $('form#xettuyen select[name=truong]').html('<option value="0">Đang tải</option>').prop('disabled', true)
-                $('form#xettuyen select[name=tinhthanh]').prop('disabled', true)
+                $('form#xettuyen select[name=school]').html('<option value="0">Đang tải</option>').prop('disabled', true)
+                $('form#xettuyen select[name=province]').prop('disabled', true)
                 $.getJSON('data/pt_' + pro + '.json', function(data){
                     truongpt[pro] = data
                     makeSchoolSelect(data)
-                    $('form#xettuyen select[name=tinhthanh]').prop('disabled', false)
+                    $('form#xettuyen select[name=province]').prop('disabled', false)
                 });
             } else {
                 makeSchoolSelect(truongpt[pro])
@@ -762,21 +762,21 @@ $(document).ready(function () {
         }
     })
 
-    $('form#xettuyen select[name=nhommon]').on('change', function (e) {
+    $('form#xettuyen select[name=subject_combination]').on('change', function (e) {
         var me = $(this)
         var group = me.val();
 
         if (group == 0) {
-            $('form#xettuyen div.sub_1_form label').text('Điểm môn 1')
-            $('form#xettuyen div.sub_1_form input.nhapdiemform').prop('disabled', true)
-            $('form#xettuyen div.sub_2_form label').text('Điểm môn 2')
-            $('form#xettuyen div.sub_2_form input.nhapdiemform').prop('disabled', true)
-            $('form#xettuyen div.sub_3_form label').text('Điểm môn 3')
-            $('form#xettuyen div.sub_3_form input.nhapdiemform').prop('disabled', true)
+            $('form#xettuyen div.sub1_form label').text('Điểm môn 1')
+            $('form#xettuyen div.sub1_form input.nhapdiemform').prop('disabled', true)
+            $('form#xettuyen div.sub2_form label').text('Điểm môn 2')
+            $('form#xettuyen div.sub2_form input.nhapdiemform').prop('disabled', true)
+            $('form#xettuyen div.sub3_form label').text('Điểm môn 3')
+            $('form#xettuyen div.sub3_form input.nhapdiemform').prop('disabled', true)
         } else {
             $.each(nhommon[group], function (index, value) {
-                $('form#xettuyen div.sub_' + index + '_form label').text('Điểm môn ' + index + " : " + value)
-                $('form#xettuyen div.sub_' + index + '_form input.nhapdiemform').prop('disabled', false)
+                $('form#xettuyen div.sub' + index + '_form label').text('Điểm môn ' + index + " : " + value)
+                $('form#xettuyen div.sub' + index + '_form input.nhapdiemform').prop('disabled', false)
             })
         }
     })
@@ -810,5 +810,25 @@ $(document).ready(function () {
         }
 
         form.find('.ketqua').val(_math_round(sum / count, 2))
+    })
+    
+    $('form#xettuyen').on('submit', function(e){
+        e.preventDefault()
+        var me = $(this)
+        var data = me.serialize();
+        me.find('button').prop('disabled', true);
+        
+        $.post('http://localhost/education/public-api/admission/school-report/add', data, function(data) {
+            if(data.error == 0) {
+                alert('Cảm ơn bạn đã đăng ký xét tuyển vào trường Việt Hàn, chúng tôi sẽ liên lạc và thông báo kết quả sớm với bạn.')
+                me[0].reset();
+            } else {
+                console.log(data.form_error.code + "\n");
+                console.log(data.form_error.message + "\n");
+                console.log(data.form_error.field + "\n");
+                alert(data.message)
+            }
+            me.find('button').prop('disabled', false);
+        })
     })
 })
