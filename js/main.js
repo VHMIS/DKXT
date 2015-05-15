@@ -3,16 +3,30 @@ function _math_round(value, decimals) {
 }
 
 $(document).ready(function () {
-    // Menu
+// Menu
     $('.dropdown').hover(
-        function() {
-            $(this).addClass('open')
-        },
-        function() {
-            $(this).removeClass('open')
-        }
+            function () {
+                $(this).addClass('open')
+            },
+            function () {
+                $(this).removeClass('open')
+            }
     )
-        
+
+    // To top
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 200) {
+            $('.totop').show()
+        } else {
+            $('.totop').hide();
+        }
+    })
+    
+    $('.totop').click(function (event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 'slow');
+    })
+
     // Var
     var nhommon = {
         1: {
@@ -417,7 +431,6 @@ $(document).ready(function () {
     $('form#xettuyen select[name=province]').on('change', function (e) {
         var me = $(this)
         var pro = me.val();
-
         if (pro == "") {
             $('form#xettuyen select[name=school]').html('<option value="0">Chọn trường</option>').prop('disabled', true)
         } else {
@@ -438,7 +451,6 @@ $(document).ready(function () {
     $('form#xettuyen select[name=subject_combination]').on('change', function (e) {
         var me = $(this)
         var group = me.val();
-
         if (group == 0) {
             $('form#xettuyen div.sub1_form label').text('Điểm môn 1')
             $('form#xettuyen div.sub1_form input.nhapdiemform').prop('disabled', true)
@@ -460,7 +472,6 @@ $(document).ready(function () {
         var count = 0;
         var sum = 0;
         var error = false;
-
         form.removeClass('has-error')
 
         form.find('.nhapdiemform').each(function () {
@@ -490,7 +501,6 @@ $(document).ready(function () {
         var me = $(this)
         var data = me.serialize();
         me.find('button').prop('disabled', true);
-        
         $.post('https://vhmis.viethanit.edu.vn/education/public-api/admission/school-report/add', data, function (data) {
             if (data.error == '0') {
                 alert('Cảm ơn bạn đã đăng ký xét tuyển vào trường Việt Hàn, chúng tôi sẽ liên lạc và thông báo kết quả sớm với bạn.')
