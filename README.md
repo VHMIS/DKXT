@@ -1,5 +1,7 @@
 # Website tuyển sinh 2015
-Website tuyển sinh 2015 của trường CĐ Công nghệ thông tin Hữu nghị Việt Hàn 
+Website tuyển sinh 2015 của trường CĐ Công nghệ thông tin Hữu nghị Việt Hàn
+## Demo
+http://vhmis.github.io/DKXT
 ## Build
 ###Chỉnh sửa file config
 
@@ -11,3 +13,6 @@ Website tuyển sinh 2015 của trường CĐ Công nghệ thông tin Hữu ngh�
 ###Build
 
      jekyll build
+## Copyright
+Bootstrap Framework by Bootstrap Twitter and its third paties.
+Viethan IT College
