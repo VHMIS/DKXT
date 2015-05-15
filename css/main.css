@@ -173,6 +173,10 @@ footer {
 .admission_card h3 {
     margin-top: 0;
 }
+.admission_card.affix {
+    top: 15px;
+    width: 317px;
+}
 
 .form_register h2 {
     margin-top: 0;
