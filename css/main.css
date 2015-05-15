@@ -178,3 +178,13 @@ footer {
     margin-top: 0;
     margin-bottom: 15px;
 }
+
+table ul {
+    margin: 5px 0 0 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+table ul li {
+    margin: 5px 0 0 0;
+}
