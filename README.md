@@ -14,5 +14,6 @@ http://vhmis.github.io/DKXT
 
      jekyll build
 ## Copyright
-Bootstrap Framework by Bootstrap Twitter and its third paties.
 Viethan IT College
+
+Bootstrap Framework by Bootstrap Twitter and its third paties.
