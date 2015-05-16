@@ -240,9 +240,11 @@ $(document).ready(function () {
             var sub = $(this)
 
             if (sub.val() != '') {
+                sub.val(sub.val().replace(',', '.'))
                 if ($.isNumeric(sub.val()) && parseFloat(sub.val()) >= 0 && parseFloat(sub.val()) <= 10) {
-                    count++
-                    sum += parseFloat(sub.val())
+                    var heso = sub.data('count')
+                    count += heso
+                    sum += parseFloat(sub.val()) * heso
                 } else {
                     error = true;
                 }
