@@ -15,5 +15,5 @@ http://vhmis.github.io/DKXT
      jekyll build
 ## Copyright
 Viethan IT College
-
+## Third paties
 Bootstrap Framework by Bootstrap Twitter and its third paties.
