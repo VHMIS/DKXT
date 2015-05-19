@@ -1,0 +1,41 @@
+Skip to content
+This repository  
+Explore
+Gist
+Blog
+Help
+@volecong volecong
+ 
+ Unwatch 2
+  Star 0
+ Fork 0VHMIS/DKXT
+ branch: gh-pages  DKXT/nganh_qtkd.html
+@volecongvolecong a day ago Create nganh_qtkd.html
+1 contributor
+RawBlameHistory     53 lines (46 sloc)  2.318 kb
+---
+layout: default
+title: VHMIS
+header_css: no-banner
+---
+
+        <div class="container sc-breadcrumb">
+            <div>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Trang tuyển sinh 2015</a></li>
+                    <li class="active">Danh sách xét tuyển</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="container sc-main">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="block_component admission_card" data-spy="affix" data-offset-top="200">
+                        <p><strong>Nội dung đang cập nhật! Xin mời quay lại sau</strong> </p>
+					</div>
+				</div>
+            </div>    
+        </div>
+Status API Training Shop Blog About
+© 2015 GitHub, Inc. Terms Privacy Security Contact
