@@ -1,5 +1,4 @@
 body {
-    /*//background-image:url(../img/pattern2.png)*/
     background-color: #e8e8e8;
 }
 
@@ -56,8 +55,8 @@ header .logo h1 {
 
 /* navbar style 1 */
 .navbar-s1 {
-    color: 000;
-    background: #1A77CD;;
+    color: #000;
+    background: #1a77cd;
     border-radius: 0;
     border: 0;
     max-height: 50px;
@@ -296,8 +295,9 @@ footer a:active {
     top: 46px;
     left: 10px;
     z-index: 90;
-    background: #ddd;
-    border: 1px solid #fff;
+    background: #1a77cd;
+    color: #fff;
+    border: 2px solid #fff;
     border-radius: 2px;
     padding: 3px;
     font-size: 13px;
@@ -326,6 +326,10 @@ footer a:active {
     font-weight: bold;
     text-align: center;
     padding-top: 10px;
+}
+
+.block-info.contact-info h2 {
+    background: #d9534f;
 }
 
 .block-info.news-info h2 {
