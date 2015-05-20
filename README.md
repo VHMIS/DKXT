@@ -14,6 +14,6 @@ http://viethanit.edu.vn/tuyensinh/
 
      jekyll build
 ## Copyright
-Viethan IT College
+Viethan IT College (http://viethanit.edu.vn)
 ## Third paties
 Bootstrap Framework by Bootstrap Twitter and its third paties.
