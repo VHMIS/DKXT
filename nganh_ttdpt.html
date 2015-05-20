@@ -1,43 +1,16 @@
 ---
 layout: default
-title: VHMIS
+title: Ngành truyền thông đa phương tiện | Tuyển sinh 2015
 header_css: no-banner
+major: ttdpt
 ---
 
-        <div class="container sc-breadcrumb">
-            <div>
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Trang tuyển sinh 2015</a></li>
-                    <li><a href="#">Ngành đào tạo</a></li>
-                    <li class="active">Thiết kế đồ họa</li>
-                </ol>
-            </div>
-        </div>
+        {% include major_breadcrumb.html %}
 
         <div class="container sc-main">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="block_component admission_card" data-spy="affix" data-offset-top="200">
-                        <p><strong>Ngành Thiết kế đồ họa</strong>, mã ngành <strong>C210403</strong> </p>
-                        <p>Hình thức tuyển sinh:</p>
-                        <ul>
-                            <li>Theo kết quả kỳ thi THPT Quốc gia</li>
-                            <li>Xét tuyển học bạ THPT</li>
-                        </ul>
-                        <p>Tổ hợp xét tuyển:</p>
-                        <ul>
-                            <li>Toán, Vật lí, Hoá học</li>
-                            <li>Toán, Vật lí, Tiếng Anh</li>
-                            <li>Toán, Ngữ văn, Tiếng Anh</li>
-                        </ul>
-                        <p>Thời gian tuyển sinh:</p>
-                        <ul>
-                            <li>Đợt 1:</li>
-                            <li>Đợt 2:</li>
-                        </ul>
-                        <p class="alert alert-info">Thí sinh xét tuyển ngành này theo kết quả học bạ có thể <strong><a href="dkxt_hocba_online.html">đăng ký online ngay bây giờ</a></strong> hoặc tìm hiểu thêm về <a href="thongtin_tuyensinh2015.html">thông tin tuyển sinh 2015 tại đây</a>.</p>
-                        <a href="dkxt_hocba_online.html" class="btn btn-primary btn-lg btn-block">Đăng ký xét tuyển bằng học bạ</a>
-                    </div>
+                    {% include admission_card.html %}
                 </div>
 
                 <div class="col-md-8">

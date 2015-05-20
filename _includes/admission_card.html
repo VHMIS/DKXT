@@ -1,24 +1,6 @@
----
-layout: default
-title: VHMIS
-header_css: no-banner
----
-
-        <div class="container sc-breadcrumb">
-            <div>
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Trang tuyển sinh 2015</a></li>
-                    <li><a href="#">Ngành đào tạo</a></li>
-                    <li class="active">Thiết kế đồ họa</li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="container sc-main">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="block_component admission_card" data-spy="affix" data-offset-top="200">
-                        <p><strong>Ngành Thiết kế đồ họa</strong>, mã ngành <strong>C210403</strong> </p>
+{% assign major = site.data.majors[page.major] %}                    
+                    <div class="block_component admission_card" data-spy="affix" data-offset-top="140">
+                        <p><strong>Ngành {{ major.title }}</strong>, mã ngành <strong>{{ major.code }}</strong> </p>
                         <p>Hình thức tuyển sinh:</p>
                         <ul>
                             <li>Theo kết quả kỳ thi THPT Quốc gia</li>
@@ -32,21 +14,9 @@ header_css: no-banner
                         </ul>
                         <p>Thời gian tuyển sinh:</p>
                         <ul>
-                            <li>Đợt 1:</li>
-                            <li>Đợt 2:</li>
+                            <li>Đợt 1: Từ 01/06 – 30/07 năm 2015</li>
+                            <li>Đợt 2: Từ 10/08 – 30/09 năm 2015</li>
                         </ul>
                         <p class="alert alert-info">Thí sinh xét tuyển ngành này theo kết quả học bạ có thể <strong><a href="dkxt_hocba_online.html">đăng ký online ngay bây giờ</a></strong> hoặc tìm hiểu thêm về <a href="thongtin_tuyensinh2015.html">thông tin tuyển sinh 2015 tại đây</a>.</p>
                         <a href="dkxt_hocba_online.html" class="btn btn-primary btn-lg btn-block">Đăng ký xét tuyển bằng học bạ</a>
                     </div>
-                </div>
-
-                <div class="col-md-8">
-                    <div class="block_component">
-                        <p>Đang cập nhật nội dung</p>
-                    </div>
-
-
-                </div>
-
-            </div>    
-        </div>

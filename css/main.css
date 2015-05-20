@@ -1,19 +1,23 @@
+body {
+    /*//background-image:url(../img/pattern2.png)*/
+    background-color: #e8e8e8;
+}
+
 .container {
-    width: 1010px;
+    width: 990px;
     background: #ffffff;    
-    padding: 15px;
+    padding: 5px;
     margin: 15px auto;
+}
+
+.container.sc-header {
+    padding-bottom: 0px;
 }
 
 .container.sc-breadcrumb, .container.sc-main {
     background: none;
     padding: 0px;
     margin: 0px auto;
-}
-
-.container.sc-main .block_component {
-    background: #fff;
-    padding: 15px;
 }
 
 header.banner {
@@ -26,8 +30,9 @@ header.banner div.row div {
 }
 
 header.no-banner {
-    height: 70px;
-    overflow: hidden;
+    //height: 70px;
+    //overflow: hidden;
+    display: none;
 }
 
 header.no-banner h1 {
@@ -41,11 +46,8 @@ header.no-banner h1 small {
     margin-bottom: 5px;
 }
 
-body {
-    background-image:url(../img/pattern2.png)
-}
-
 header {
+    margin-bottom: 5px;
 }
 
 header .logo h1 {
@@ -53,29 +55,46 @@ header .logo h1 {
 }
 
 /* navbar style 1 */
-
 .navbar-s1 {
     color: 000;
-    background: #eee;
-    margin-bottom: 10px;
+    background: #1A77CD;;
     border-radius: 0;
     border: 0;
+    max-height: 50px;
+    margin-bottom: 5px;
+}
+
+.navbar-s1 .navbar-header {
+    background-color: #fff;
+}
+
+.navbar-s1 .navbar-brand {
+    background: url(../img/logo.png) 0 0 no-repeat;
+    background-size: 50px 47px;
+    padding-left: 60px;
+    margin-right: 20px;
+    color: #1A77CD
 }
 
 .navbar-s1 .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-    color: #ccc;
+    color: #1A77CD;
     background-color: transparent;
 }
 
+.navbar-s1 .navbar-nav {
+    border: 0px;
+    background: #1A77CD;
+}
+
 .navbar-s1 .navbar-nav > li > a {
-    color: #000;
+    color: #fff;
 }
 
 .navbar-s1 .navbar-nav > li > a:hover, .navbar-s1 .navbar-nav > li > a:active, .navbar-s1 .navbar-nav > li > a:focus,
 .navbar-s1 .navbar-nav > .active > a, .navbar-s1 .navbar-nav > .active > a:focus, .navbar-s1 .navbar-nav > .active > a:hover, .navbar-s1 .navbar-nav > .active > a:active,
 .navbar-s1 .navbar-nav > .open > a, .navbar-s1 .navbar-nav > .open > a:focus, .navbar-s1 .navbar-nav > .open > a:hover, .navbar-s1 .navbar-nav > .open > a:active {
-    color: #000;
-    background: #ccc;
+    color: #fff;
+    background: #1A77CD;
 }
 
 .navbar-s1 .navbar-nav > li > .dropdown-menu {
@@ -108,7 +127,7 @@ header .logo h1 {
 
 .breadcrumb {
     margin-bottom: 15px;
-    padding: 0;
+    padding: 0 0 0 5px;
     background: none;
 }
 
@@ -134,48 +153,221 @@ form .border-bottom {
 
 footer {
     margin : 0;
+    background: none !important;
 }
 
-.flash_cards {
+footer a,
+footer a:hover,
+footer a:visited,
+footer a:active {
+    color: #333;
 }
 
-.flash_card img {
-    display: none;
+.flash-card {
+    background: #fff;
+    padding: 5px; 
 }
 
-.flash_card h1 {
-    font-size: 20px;
-    background: #4aa8f2;
+.flash-card ul {
+    padding-left: 20px;
+}
+
+.flash-header {
+    background-color: #d9534f;
+    padding: 10px;
+    margin: 0px;
     color: #fff;
+    font-size: 16px;
+}
+
+.flash-photo {
+    border-top: 5px solid #fff;
+    height: 175px;
+    overflow: hidden;
+}
+
+.flash-photo img {
+    width: 100%;
+}
+
+.flash-body {
+    padding: 10px;
+    color: #000;
+}
+
+.flash-detail-link {
+    border-bottom: 1px solid #e8e8e8;
+    text-align: right;
+    padding-right: 5px;
+    padding-bottom: 15px;
+}
+
+.flash-detail-link a,
+.flash-detail-link a:hover,
+.flash-detail-link a:active,
+.flash-detail-link a:visited {
+    text-align: center;
+    /*float: right;*/
+    display: inline-block;
+    background: #d9534f;
     padding: 4px;
-    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #fff;
+    
 }
 
-.flash_card p {
-    margin-top: 10px;
+.flash-more {
+    padding: 10px;
 }
 
-.flash_card ul.nganh {
+.flash-majors .flash-header {
+    background: #7BCD1A;
+}
+
+.flash-majors .flash-body ul {
+    list-style: none;
     margin: 0px;
     padding: 0px;
+}
+
+.flash-majors .flash-body ul li {
+    margin: 0px;
+    padding: 9px 0px 9px 0px;
+    
+}
+
+.flash-majors .flash-body ul li + li {
+    border-top: 1px solid #e8e8e8;
+}
+
+.flash-majors .flash-body ul li a {
+    color: #000;
+}
+
+.flash-about .flash-header {
+    background: #00A0E9;
+}
+
+.flash-about .flash-body ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.flash-about .flash-body ul li {
+    margin: 0px;
+    padding: 9px 0px 9px 0px;
+    
+}
+.flash-about .flash-body ul li + li {
+    border-top: 1px solid #e8e8e8;
+}
+
+.flash-about .flash-body ul li a {
+    color: #000;
+}
+
+.page-heading {
+    background: #fff;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.page-heading h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+.block-info {
+    background: #fff;
+    padding: 5px;
+    margin-top: 15px;
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+}
+
+.block-info h2 {
+    position: absolute;
+    top: 46px;
+    left: 10px;
+    z-index: 90;
+    background: #ddd;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    padding: 3px;
+    font-size: 13px;
+}
+
+.block-info .block-info-1 {
+    height: 70px;
+    overflow: hidden;
+}
+
+.block-info .block-info-2 {
+    height: 80px;
+    padding-top: 22px;
+    overflow: hidden;
+    padding-left: 8px;
+}
+
+.block-info img {
+    width: 100%;
+}
+
+.block-info.contact-info .block-info-1 {
+    background: #4CA9F4;
+    color: #fff;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.block-info.news-info h2 {
+    position: relative;
+    width: 100px;
+    top: 0px;
+    left: 0px;
+    margin: 0;
+    padding: 3px;
+}
+
+.block-info.news-info .block-info-2 {
+    height: auto;
+    padding-top: 5px;
+}
+
+.block-info.news-info .block-info-2 ul {
+    padding: 0 0 0 7px;
+    margin: 0px;
     list-style: none;
 }
 
-.flash_card ul.nganh li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+.block-info.news-info .block-info-2 ul li {
+    padding-bottom: 6px;
 }
 
-.flash_card ul.nganh li:last-child {
-    border-bottom: 0;
+.block-info.news-info .block-info-2 ul li a {
+    text-overflow-mode: clip;
+}
+
+.block_component {
+    padding: 10px;
+    background: #fff;
 }
 
 .admission_card h3 {
     margin-top: 0;
 }
+
 .admission_card.affix {
     top: 15px;
-    width: 317px;
+    width: 310px;
 }
 
 .form_register h2 {
@@ -204,8 +396,4 @@ table ul li {
     cursor: pointer;
     display: none;
     border: 1px solid #ddd;
-}
-
-.totop.affix {
-    display: block;
 }
