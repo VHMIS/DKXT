@@ -1,7 +1,7 @@
 # Website tuyển sinh 2015
 Website tuyển sinh 2015 của trường CĐ Công nghệ thông tin Hữu nghị Việt Hàn
-## Demo
-http://vhmis.github.io/DKXT
+## Địa chỉ
+http://viethanit.edu.vn/tuyensinh/
 ## Build
 ###Chỉnh sửa file config
 
