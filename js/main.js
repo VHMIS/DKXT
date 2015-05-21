@@ -2,8 +2,83 @@ function _math_round(value, decimals) {
     return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
 }
 
+(function($) {
+    var vhmisModal = function(control, element, options) {
+        this.options = options
+        this.$element = $('#' + element)
+        this.$control = $(control)
+        
+        if(this.options.element != null) {
+            this.$control.on('click', this.options.element, $.proxy(this.show, this))
+        } else {
+            this.$control.on('click', $.proxy(this.show, this))
+        }
+        $('#site_overlay').on('click', $.proxy(this.hide, this))
+        $('#site_overlay').on('click', '.close', function(e) {
+            $('#site_overlay').trigger('click')
+        })
+    }
+    
+    vhmisModal.prototype = {
+        constructor: vhmisModal,
+        
+        show: function (e) {
+            e.preventDefault()
+            
+            var beforeShow = true
+            
+            if(this.options['beforeShow'] != null) beforeShow = this.options['beforeShow'](e.currentTarget, this.$element)
+            
+            if(beforeShow == false) return false
+            
+            $('body').addClass('site_overlay_active')
+            $('#site_overlay').addClass('active')
+            this.$element.addClass('active')
+            
+            //this.$element.trigger('show', [e.currentTarget])
+            if(this.options['show'] != null) this.options['show'](e.currentTarget, this.$element)
+        },
+        
+        hide: function (e) {
+            if(e.target.id != 'site_overlay') return
+
+            e.preventDefault()
+            $('body').removeClass('site_overlay_active')
+            $('#site_overlay').removeClass('active')
+            this.$element.removeClass('active')
+            
+            //this.$element.trigger('hide', [e.currentTarget])
+            if(this.options['hide'] != null) this.options['hide'](e.currentTarget, this.$element)
+        }
+    }
+
+    $.fn.vhmisModal = function(idModal, option) {
+        return this.each(function() {
+            var $this = $(this)
+            var options = $.extend({}, $.fn.vhmisModal.defaults, typeof option == 'object' && option)
+            var modal = new vhmisModal($this, idModal, options)
+        })
+    }
+    
+    $.fn.vhmisModal.defaults = {
+        element: null,
+        beforeShow: null,
+        show: null,
+        hide: null,
+        url: null
+    }
+    
+})(jQuery);
+
 $(document).ready(function () {
-// Menu
+    // Modal
+    $('a.open_send_question').vhmisModal('send_question_modal', {
+        beforeShow: function() {
+            $('#ask_other_question').trigger('click')
+        }
+    })
+    
+    // Menu
     $('.dropdown').hover(
             function () {
                 $(this).addClass('open')
@@ -270,12 +345,48 @@ $(document).ready(function () {
                 alert('Cảm ơn bạn đã đăng ký xét tuyển vào trường Việt Hàn, chúng tôi sẽ liên lạc và thông báo kết quả sớm với bạn.')
                 me[0].reset();
             } else {
-                console.log(data.form_error.code + "\n");
-                console.log(data.form_error.message + "\n");
-                console.log(data.form_error.field + "\n");
+                if(data.error == '2') {
+                    console.log(data.form_error.code + "\n");
+                    console.log(data.form_error.message + "\n");
+                    console.log(data.form_error.field + "\n");
+                }
                 alert(data.message)
             }
             me.find('button').prop('disabled', false);
         }, 'json')
     })
+    
+    $('#ask_other_question').on('click', function(e) {
+        e.preventDefault()
+        $('#send_question_modal').find(".for_question").removeClass('hide')
+        $('#send_question_modal').find(".for_response").addClass('hide')
+    })
+    
+    $('form#ask_question').on('submit', function(e) {
+        e.preventDefault()
+        var me = $(this)
+        var data = me.serialize()
+        me.find('button').prop('disabled', true);
+        $.post('https://vhmis.viethanit.edu.vn/education/public-api/admission/question/add', data, function (data) {
+            if (data.error == '0') {
+                $('#send_question_modal').find(".for_question").addClass('hide')
+                $('#send_question_modal').find(".for_response").removeClass('hide')
+                me[0].reset()
+            } else {
+                if(data.error == '2') {
+                    console.log(data.form_error.code + "\n")
+                    console.log(data.form_error.message + "\n")
+                    console.log(data.form_error.field + "\n")
+                }
+                alert(data.message)
+            }
+            me.find('button').prop('disabled', false);
+        }, 'json')
+    })
+    
+    if(w_page == 'hoidap') {
+        $.get('http://vhmis.viethanit.edu.vn/education/public-api/admission/questions', function (data) {
+            $('div#question-list').html(data)
+        })
+    }
 })

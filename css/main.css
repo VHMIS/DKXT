@@ -167,6 +167,10 @@ footer a:active {
     padding: 5px; 
 }
 
+.flash-card + .flash-card {
+    margin-top: 20px;
+}
+
 .flash-card ul {
     padding-left: 20px;
 }
@@ -177,6 +181,13 @@ footer a:active {
     margin: 0px;
     color: #fff;
     font-size: 16px;
+}
+
+.flash-header a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
 }
 
 .flash-photo {
@@ -215,7 +226,7 @@ footer a:active {
     border-radius: 3px;
     text-decoration: none;
     color: #fff;
-    
+
 }
 
 .flash-more {
@@ -235,7 +246,7 @@ footer a:active {
 .flash-majors .flash-body ul li {
     margin: 0px;
     padding: 9px 0px 9px 0px;
-    
+
 }
 
 .flash-majors .flash-body ul li + li {
@@ -259,7 +270,7 @@ footer a:active {
 .flash-about .flash-body ul li {
     margin: 0px;
     padding: 9px 0px 9px 0px;
-    
+
 }
 .flash-about .flash-body ul li + li {
     border-top: 1px solid #e8e8e8;
@@ -399,4 +410,93 @@ table ul li {
     cursor: pointer;
     display: none;
     border: 1px solid #ddd;
+}
+
+body.site_overlay_active {
+    overflow: hidden !important;
+    margin-right: 15px;
+}
+
+.site_overlay {
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-x: auto;
+    overflow-y: scroll;
+    display: none;
+    cursor: pointer;
+}
+
+.site_modal {
+    position: static;
+    margin: 40px auto;
+    width: 800px;
+    background: #ffffff;
+    box-shadow: 0px 3px 6px rgba(34, 25, 25, 0.6);
+    padding: 10px;
+    cursor: default;
+    display: none;
+
+}
+
+.site_modal .site_modal_container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.site_overlay.active,
+.site_modal.active {
+    display: block;
+}
+
+.site_modal_container .site_modal_header {
+    background: #00A0E9;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.site_modal_container .site_modal_header button.close {
+    margin-top: -22px;
+    color: #fff;
+    opacity: 1;
+    text-shadow: none;
+}
+
+.site_modal_container .site_modal_header h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+.site_modal.send_question_modal {
+    width: 800px;
+}
+
+.site_modal.send_question_modal p {
+    margin-bottom: 15px;
+}
+
+.questions-list article {
+    
+}
+
+.questions-list article h2 {
+    background: #e8e8e8;
+    color: #000;
+    font-size: 15px;
+    margin: 0px;
+    padding: 10px;
+}
+
+.questions-list article + article {
+    margin-top: 20px;
+}
+
+.questions-list article p {
+    padding: 10px;
 }
