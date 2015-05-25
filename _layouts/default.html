@@ -9,6 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <title>{{ page.title }} | Trường CĐ CNTT Hữu Nghị Việt Hàn</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
         <!--[if lt IE 9]>
@@ -22,24 +23,33 @@
 
     <body>
         <div class="container sc-header">
+            <!-- Header -->
+            <header class="">
+                <div class="row">
+                    <div class="col-md-9">
+                        <a href="index.html"><h1 class="header-title">
+                            <small>Trường Cao đẳng Công nghệ thông tin Hữu nghị Việt - Hàn</small><br>
+                            Trang tuyển sinh 2015
+                        </h1></a>
+                    </div>
+                </div>
+            </header>
             <!-- Nav -->
             <nav class="navbar navbar-default navbar-s1">
-                <div class="navbar-header">
+<!--                <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">TRANG TUYỂN SINH 2015</a>
-                </div>
+                </div>-->
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="thongtin_tuyensinh2015.html">Tuyển sinh<span class="caret"></span></a>
+                        <a href="thongtin_tuyensinh2015.html">Thông tin tuyển sinh <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="thongtin_tuyensinh2015.html">Thông tin tuyển sinh 2015</a></li>
-                            <li><a href="qt_dangky.html">Quy trình đăng ký</a></li>
                             <li><a href="ds_xettuyen.html">Danh sách xét tuyển</a></li>
                             <li><a href="ds_trungtuyen.html">Danh sách trúng tuyển</a></li>
-                            <!--<li><a href="#">Thông báo nhập học</a></li>-->
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#">Ngành đào tạo <span class="caret"></span></a>
+                        <a href="#">Giới thiệu ngành đào tạo <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="nganh_dt_tt.html">Công nghệ kĩ thuật điện tử, truyền thông</a></li>
                             <li><a href="nganh_kt.html">Công nghệ kĩ thuật kiến trúc</a></li>
@@ -52,8 +62,11 @@
                             <li><a href="nganh_marketing.html">Marketing</a></li> 
                         </ul>
                     </li>
+                    <li>
+                        <a href="#">Học bổng - Cơ hội việc làm</a>
+                    </li>
                     <li class="dropdown">
-                        <a href="#">Đăng ký xét tuyển <span class="caret"></span></a>
+                        <a href="dkxt_hocba_online.html">Đăng ký xét tuyển trực tuyến<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="dkxt_hocba_online.html">Xét học bạ THPT</a></li>
                             <li><a href="#">Đăng ký nguyện vọng 1</a></li>
@@ -61,7 +74,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="tintuc.html">Tin tuyển sinh</a>
+                        <a href="tintuc.html">Tin tức tuyển sinh</a>
+                    </li>
+                    <li>
+                        <a href="hoidap.html">Hỏi đáp</a>
                     </li>
                     <!--<li class="dropdown">
                         <a href="hoidap.html">Học bổng - Việc làm</a>
@@ -77,17 +93,7 @@
             </nav>
             <!-- ./. Nav -->
 
-            <!-- Header -->
-            <header class="{{ page.header_css }}">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h1>
-                            <small>Trường CĐ CNTT Hữu nghị Việt - Hàn</small>
-                            Trang tuyển sinh 2015
-                        </h1>
-                    </div>
-                </div>
-            </header>
+            
         </div>
 
         {{ content }}

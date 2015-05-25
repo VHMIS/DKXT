@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    width: 990px;
+    width: 1030px;
     background: #ffffff;    
     padding: 5px;
     margin: 15px auto;
@@ -36,7 +36,7 @@ header.no-banner {
 
 header.no-banner h1 {
     font-size: 30px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 header.no-banner h1 small {
@@ -46,11 +46,27 @@ header.no-banner h1 small {
 }
 
 header {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-header .logo h1 {
+header h1.header-title {
+    background: url(../img/logo.png) 0 0 no-repeat;
+    background-size: 67px 64px;
+    padding-left: 75px;
     margin: 0;
+    font-size: 28px;
+    color: #d9534f;
+}
+
+header a,
+header a:visited,
+header a:hover,
+header a:active {
+    text-decoration: none;
+}
+
+header h1 small {
+    color: #1A77CD;
 }
 
 /* navbar style 1 */
@@ -71,7 +87,7 @@ header .logo h1 {
     background: url(../img/logo.png) 0 0 no-repeat;
     background-size: 50px 47px;
     padding-left: 60px;
-    margin-right: 20px;
+    margin-right: 10px;
     color: #1A77CD
 }
 
