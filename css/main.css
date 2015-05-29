@@ -509,6 +509,12 @@ body.site_overlay_active {
     padding: 10px;
 }
 
+.questions-list article div {
+    padding: 10px;
+    color: #999;
+    font-style: italic;
+}
+
 .questions-list article + article {
     margin-top: 20px;
 }
