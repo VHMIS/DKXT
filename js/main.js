@@ -385,7 +385,7 @@ $(document).ready(function () {
     })
     
     if(w_page == 'hoidap') {
-        $.get('http://vhmis.viethanit.edu.vn/education/public-api/admission/questions', function (data) {
+        $.get('https://vhmis.viethanit.edu.vn/education/public-api/admission/questions', function (data) {
             $('div#question-list').html(data)
         })
     }
