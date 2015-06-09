@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    width: 1045px;
+    width: 1145px;
     background: #ffffff;    
     padding: 5px;
     margin: 15px auto;
@@ -11,6 +11,9 @@ body {
 
 .container.sc-header {
     padding-bottom: 0px;
+    font-family: 'Roboto', sans-serif;
+    z-index: 9999;
+    position: relative;
 }
 
 .container.sc-breadcrumb, .container.sc-main {
@@ -75,19 +78,19 @@ header h1 small {
     background: #1a77cd;
     border-radius: 0;
     border: 0;
-    max-height: 50px;
     margin-bottom: 5px;
 }
 
 .navbar-s1 .navbar-header {
     background-color: #fff;
+    display: none;
 }
 
 .navbar-s1 .navbar-brand {
     background: url(../img/logo.png) 0 0 no-repeat;
     background-size: 50px 47px;
-    padding-left: 60px;
-    margin-right: 10px;
+    padding-left: 50px;
+    margin-right: 0px;
     color: #1A77CD
 }
 
@@ -138,6 +141,43 @@ header h1 small {
 
 .navbar-s1 .navbar-right {
     margin-right: 0;
+}
+
+.spec_ontop {
+    display: none;
+}
+
+.container.sc-header.fixed {
+    padding: 0px;
+    margin-top: 0px;
+    width: 1145px;
+    margin-bottom: 140px;
+}
+
+.container.sc-header.fixed header {
+    display: none;
+}
+
+.container.sc-header.fixed .navbar-s1 {
+    position: fixed;
+    margin: 0 auto;
+    text-align: center;
+    border: 5px solid #fff;
+    width: inherit;
+    height: 60px;
+}
+
+.container.sc-header.fixed .navbar-s1 .navbar-header {
+    display: block;
+}
+
+.container.sc-header.fixed .spec_ontop {
+    position: fixed;
+    top: 60px;
+    height: 15px;
+    width: inherit;
+    display: block;
+    background: #e8e8e8;
 }
 
 .breadcrumb {
@@ -208,7 +248,7 @@ footer a:active {
 
 .flash-photo {
     border-top: 5px solid #fff;
-    height: 175px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -396,8 +436,8 @@ footer a:active {
 }
 
 .admission_card.affix {
-    top: 15px;
-    width: 310px;
+    top: 70px;
+    width: 362px;
 }
 
 .form_register h2 {

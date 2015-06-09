@@ -80,14 +80,23 @@ $(document).ready(function () {
     
     // Menu
     $('.dropdown').hover(
-            function () {
-                $(this).addClass('open')
-            },
-            function () {
-                $(this).removeClass('open')
-            }
+        function () {
+            $(this).addClass('open')
+        },
+        function () {
+            $(this).removeClass('open')
+        }
     )
-
+    
+    // Always top
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 80) {
+            $('.sc-header').addClass('fixed')
+        } else {
+            $('.sc-header').removeClass('fixed')
+        }
+    })
+    
     // To top
     $(window).scroll(function () {
         if ($(window).scrollTop() > 200) {
