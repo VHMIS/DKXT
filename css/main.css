@@ -22,43 +22,19 @@ body {
     margin: 0px auto;
 }
 
-header.banner {
-    background: url(../img/logo.jpg) center center;
-    height: 238px;
-}
-
-header.banner div.row div {
-    display: none;
-}
-
-header.no-banner {
-    //height: 70px;
-    //overflow: hidden;
-    display: none;
-}
-
-header.no-banner h1 {
-    font-size: 30px;
-    margin-top: 5px;
-}
-
-header.no-banner h1 small {
-    font-size: 18px;
-    display: block;
-    margin-bottom: 5px;
-}
-
 header {
-    margin-bottom: 10px;
+    position: relative;
 }
 
 header h1.header-title {
-    background: url(../img/logo.png) 0 0 no-repeat;
-    background-size: 67px 64px;
-    padding-left: 75px;
+    background: url(../img/logo.png) 5px 0 no-repeat;
+    background-size: 100px 94px;
+    padding-top: 25px;
+    padding-left: 120px;
     margin: 0;
     font-size: 28px;
     color: #d9534f;
+    height: 100px;
 }
 
 header a,
@@ -70,6 +46,14 @@ header a:active {
 
 header h1 small {
     color: #1A77CD;
+}
+
+header .ministry_text {
+    position: absolute;
+    top: 7px;
+    left: 137px;
+    color: #1A77CD;
+    font-size: 15px;
 }
 
 /* navbar style 1 */
