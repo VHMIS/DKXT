@@ -333,10 +333,10 @@ $(document).ready(function () {
             return;
         }
         
-        form.find('.ketqua_k10').val(count_k.k10 == 0 ? '' : _math_round(sum_k.k10 / count_k.k10, 2))
-        form.find('.ketqua_k11').val(count_k.k11 == 0 ? '' : _math_round(sum_k.k11 / count_k.k11, 2))
-        form.find('.ketqua_k12').val(count_k.k12 == 0 ? '' : _math_round(sum_k.k12 / count_k.k12, 2))
-        form.find('.ketqua').val(count == 0 ? '' : _math_round(sum / count, 2))
+        form.find('.ketqua_k10').val(count_k.k10 == 0 ? '' : _math_round(sum_k.k10 / count_k.k10, 1))
+        form.find('.ketqua_k11').val(count_k.k11 == 0 ? '' : _math_round(sum_k.k11 / count_k.k11, 1))
+        form.find('.ketqua_k12').val(count_k.k12 == 0 ? '' : _math_round(sum_k.k12 / count_k.k12, 1))
+        form.find('.ketqua').val(count == 0 ? '' : _math_round(sum / count, 1))
     })
 
     $('form#xettuyen').on('submit', function (e) {
