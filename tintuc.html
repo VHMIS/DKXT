@@ -15,9 +15,24 @@ header_css: no-banner
 
         <div class="container sc-main">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4 pull-right">
+                    {% include news_card.html %}
+                </div>
+
+                <div class="col-md-8 pull-left">
+
                     <div class="block_component">
-                        <p>Đang cập nhật nội dung</p>
+                        <div class="questions-list">
+                            {% for post in site.posts %}
+                            <article>
+                                <h2>
+                                  <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                                </h2>
+
+                                {{ post.excerpt }}
+                            </article>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>    
