@@ -82,7 +82,7 @@ page: index
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
         </div>
 
         <div class="container sc-main">
@@ -125,6 +125,9 @@ page: index
                         <h2 class="">Tin tức</h2>
                         <div class="block-info-2">
                             <ul>
+                            {% for post in site.posts limit:3 %}
+                                <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                            {% endfor %}
                             </ul>
                         </div>
                     </div>
