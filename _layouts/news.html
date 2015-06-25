@@ -21,17 +21,24 @@ layout: default
                 <div class="col-md-8 pull-lef">
 
                     <div class="block_component">
-                        
+
                         <article>
                             <header role="sectionhead">
                                 <h2>{{ page.title }}</h2>
                             </header>
-                            <div>
+                            <div class="sectioncontent">
                                 {{ content }}
                             </div>
+                            <footer class="sectionfooter">
+                              <p>
+                                {{ page.writer }}
+                                {% if page.source %}
+                                | <a href="{{ page.source }}" target="_blank">Nguồn</a>
+                                {% endif %}
+                              </p>
                         </article>
-                        
+
                     </div>
                 </div>
-            </div>    
+            </div>
         </div>

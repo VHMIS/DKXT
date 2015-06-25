@@ -4,7 +4,7 @@ body {
 
 .container {
     width: 1145px;
-    background: #ffffff;    
+    background: #ffffff;
     padding: 5px;
     margin: 15px auto;
 }
@@ -204,7 +204,7 @@ footer a:active {
 
 .flash-card {
     background: #fff;
-    padding: 5px; 
+    padding: 5px;
 }
 
 .flash-card + .flash-card {
@@ -522,7 +522,7 @@ body.site_overlay_active {
 }
 
 .questions-list article {
-    
+
 }
 
 .questions-list article h2 {
@@ -545,4 +545,19 @@ body.site_overlay_active {
 
 .questions-list article p {
     padding: 10px;
+}
+
+/* News */
+.sectioncontent img {
+    max-width: 600px;
+}
+
+.sectionfooter p {
+    text-align: right;
+    font-style: italic;
+    color: #999;
+}
+
+.sectionfooter p a, .sectionfooter p a:active, .sectionfooter p a:hover, .sectionfooter p a:visited {
+    color: #999;
 }
