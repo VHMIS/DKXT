@@ -3,7 +3,7 @@ source:         ./
 destination:    /vhmis/WebRoot/tuyensinh
 host:           0.0.0.0
 port:           9001
-baseurl:        /
+baseurl:        
 url:            http://localhost
 excerpt_separator: <!--more-->
 encoding:       UTF-8
