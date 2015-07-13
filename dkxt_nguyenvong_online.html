@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Đăng ký xét tuyển trực tuyển | Tuyển sinh 2015
+title: Đăng ký xét tuyển trực tuyến | Tuyển sinh 2015
 header_css: no-banner
 ---
 
@@ -19,7 +19,7 @@ header_css: no-banner
             <div class="block_component form_register">
                 <h2>Đăng ký xét tuyển</h2>
                 <p class="alert alert-success">Thí sinh đã tham dự kỳ thi THPT quốc gia đăng ký xét tuyển Nguyện vọng 1 trực tuyến vào Trường Cao đẳng Công nghệ thông tin Hữu nghị Việt – Hàn năm 2015 vui lòng điền đầy đủ thông tin bên dưới. Chúng tôi sẽ liên lạc ngay sau khi nhận được đăng ký. Mọi thắc mắc xin liên hệ: 0511 3962 888.</p>
-                <form id="xettuyen" class="form-horizontal">
+                <form id="xettuyen_ne" class="form-horizontal">
                     <h3>Thông tin học sinh</h3>
                     <div class="form-group">
                         <label class="col-md-3 control-label">Họ và tên</label>
@@ -68,23 +68,23 @@ header_css: no-banner
                     <div class="form-group">
                         <label class="col-md-3 control-label">Khu vực / Đối tượng ưu tiên</label>
                             <div class="col-md-4">
-                                <select name="object_area" class="form-control">
+                                <select name="priority_area" class="form-control">
                                     <option value="1">Khu vực 1</option>
                                     <option value="2">Khu vực 2</option>
-                                    <option value="3">Khu vực 2 - Nông thôn</option>
-                                    <option value="4">Khu vực 3</option>
+                                    <option value="2NT">Khu vực 2 - Nông thôn</option>
+                                    <option value="3">Khu vực 3</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <select name="object_priority" class="form-control">
-                                    <option value="8">Chọn đối tượng ưu tiến nếu có</option>
-                                    <option value="1">01 - Dân tộc thiểu số</option>
-                                    <option value="2">02 - CSƯT, Chiến sĩ thi đua</option>
-                                    <option value="3">03 - Thương binh, bệnh binh, quân nhân...</option>
-                                    <option value="4">04 - Con liệt sĩ, thương bệnh binh nặng</option>
-                                    <option value="5">05 - Quân nhân, Công an, Thanh niên xung phong</option>
-                                    <option value="6">06 - Con thương bệnh binh dưới 81%</option>
-                                    <option value="7">07 - Lao động ưu tú, thợ giỏi</option>
+                                <select name="priority_object" class="form-control">
+                                    <option value="08">Chọn đối tượng ưu tiến nếu có</option>
+                                    <option value="01">01 - Dân tộc thiểu số</option>
+                                    <option value="02">02 - CSƯT, Chiến sĩ thi đua</option>
+                                    <option value="03">03 - Thương binh, bệnh binh, quân nhân...</option>
+                                    <option value="04">04 - Con liệt sĩ, thương bệnh binh nặng</option>
+                                    <option value="05">05 - Quân nhân, Công an, Thanh niên xung phong</option>
+                                    <option value="06">06 - Con thương bệnh binh dưới 81%</option>
+                                    <option value="07">07 - Lao động ưu tú, thợ giỏi</option>
                                 </select>
                             </div>
                     </div>
@@ -92,7 +92,7 @@ header_css: no-banner
                     <div class="form-group">
                         <label class="col-md-3 control-label">Đợt xét tuyển</label>
                         <div class="col-md-4">
-                            <select name="admission_period" class="form-control">
+                            <select name="period" class="form-control">
                                 <option value="1">Nguyện vọng 1 (01/08/15 đến 20/08/15)</option>
                                 <option value="2">Nguyện vọng bổ sung đợt 1 (25/08/15 đến 15/09/15)</option>
                                 <option value="3">Nguyện vọng bổ sung đợt 2 (20/09/15 đến 05/10/15)</option>
@@ -106,12 +106,12 @@ header_css: no-banner
                             Thí sinh chọn ngành đăng ký theo thứ tự ưu tiên từ trên xuống dưới
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="col-md-3 control-label">Ngành đăng ký</label>
                             <div class="col-md-4">
-                                <select name="applied_major_1" class="form-control">
-                                    <option value="0">Chọn ngành xét tuyển</option>
+                                <select name="major_1" class="form-control">
+                                    <option value="">Chọn ngành xét tuyển</option>
                                     <option value="C510302">C510302 - Công nghệ kĩ thuật điện tử, truyền thông</option>
                                     <option value="C510101">C510101 - Công nghệ kĩ thuật kiến trúc</option>
                                     <option value="C210403">C210403 - Thiết kế đồ họa</option>
@@ -125,7 +125,7 @@ header_css: no-banner
                             </div>
                             <div class="col-md-4">
                                 <select name="subject_combination_1" class="form-control">
-                                    <option value="0">Chọn nhóm môn xét tuyển</option>
+                                    <option value="">Chọn nhóm môn xét tuyển</option>
                                     <option value="A00">A00 Toán - Vật Lý - Hóa Học</option>
                                     <option value="A01">A01 Toán - Vật Lý - Tiếng Anh</option>
                                     <option value="D01">D01 Ngữ Văn - Toán - Tiếng Anh</option>
@@ -135,8 +135,8 @@ header_css: no-banner
                     <div class="form-group">
                         <label class="col-md-3 control-label">Ngành đăng ký</label>
                             <div class="col-md-4">
-                                <select name="applied_major_2" class="form-control">
-                                    <option value="0">Chọn ngành xét tuyển</option>
+                                <select name="major_2" class="form-control">
+                                    <option value="">Chọn ngành xét tuyển</option>
                                     <option value="C510302">C510302 - Công nghệ kĩ thuật điện tử, truyền thông</option>
                                     <option value="C510101">C510101 - Công nghệ kĩ thuật kiến trúc</option>
                                     <option value="C210403">C210403 - Thiết kế đồ họa</option>
@@ -150,7 +150,7 @@ header_css: no-banner
                             </div>
                             <div class="col-md-4">
                                 <select name="subject_combination_2" class="form-control">
-                                    <option value="0">Chọn nhóm môn xét tuyển</option>
+                                    <option value="">Chọn nhóm môn xét tuyển</option>
                                     <option value="A00">A00 Toán - Vật Lý - Hóa Học</option>
                                     <option value="A01">A01 Toán - Vật Lý - Tiếng Anh</option>
                                     <option value="D01">D01 Ngữ Văn - Toán - Tiếng Anh</option>
@@ -160,8 +160,8 @@ header_css: no-banner
                     <div class="form-group">
                         <label class="col-md-3 control-label">Ngành đăng ký</label>
                             <div class="col-md-4">
-                                <select name="applied_major_3" class="form-control">
-                                    <option value="0">Chọn ngành xét tuyển</option>
+                                <select name="major_3" class="form-control">
+                                    <option value="">Chọn ngành xét tuyển</option>
                                     <option value="C510302">C510302 - Công nghệ kĩ thuật điện tử, truyền thông</option>
                                     <option value="C510101">C510101 - Công nghệ kĩ thuật kiến trúc</option>
                                     <option value="C210403">C210403 - Thiết kế đồ họa</option>
@@ -175,7 +175,7 @@ header_css: no-banner
                             </div>
                             <div class="col-md-4">
                                 <select name="subject_combination_3" class="form-control">
-                                    <option value="0">Chọn nhóm môn xét tuyển</option>
+                                    <option value="">Chọn nhóm môn xét tuyển</option>
                                     <option value="A00">A00 Toán - Vật Lý - Hóa Học</option>
                                     <option value="A01">A01 Toán - Vật Lý - Tiếng Anh</option>
                                     <option value="D01">D01 Ngữ Văn - Toán - Tiếng Anh</option>
@@ -185,8 +185,8 @@ header_css: no-banner
                     <div class="form-group">
                         <label class="col-md-3 control-label">Ngành đăng ký</label>
                         <div class="col-md-4">
-                            <select name="applied_major_4" class="form-control">
-                                <option value="0">Chọn ngành xét tuyển</option>
+                            <select name="major_4" class="form-control">
+                                <option value="">Chọn ngành xét tuyển</option>
                                 <option value="C510302">C510302 - Công nghệ kĩ thuật điện tử, truyền thông</option>
                                 <option value="C510101">C510101 - Công nghệ kĩ thuật kiến trúc</option>
                                 <option value="C210403">C210403 - Thiết kế đồ họa</option>
@@ -205,9 +205,9 @@ header_css: no-banner
                                 <option value="A01">A01 Toán - Vật Lý - Tiếng Anh</option>
                                 <option value="D01">D01 Ngữ Văn - Toán - Tiếng Anh</option>
                             </select>
-                        </div>                     
+                        </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <div class="col-md-offset-3 col-md-9">
                             <button type="submit" class="btn btn-primary btn-lg">Đăng ký xét tuyển</button>

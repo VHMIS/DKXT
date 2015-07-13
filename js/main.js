@@ -7,7 +7,7 @@ function _math_round(value, decimals) {
         this.options = options
         this.$element = $('#' + element)
         this.$control = $(control)
-        
+
         if(this.options.element != null) {
             this.$control.on('click', this.options.element, $.proxy(this.show, this))
         } else {
@@ -18,27 +18,27 @@ function _math_round(value, decimals) {
             $('#site_overlay').trigger('click')
         })
     }
-    
+
     vhmisModal.prototype = {
         constructor: vhmisModal,
-        
+
         show: function (e) {
             e.preventDefault()
-            
+
             var beforeShow = true
-            
+
             if(this.options['beforeShow'] != null) beforeShow = this.options['beforeShow'](e.currentTarget, this.$element)
-            
+
             if(beforeShow == false) return false
-            
+
             $('body').addClass('site_overlay_active')
             $('#site_overlay').addClass('active')
             this.$element.addClass('active')
-            
+
             //this.$element.trigger('show', [e.currentTarget])
             if(this.options['show'] != null) this.options['show'](e.currentTarget, this.$element)
         },
-        
+
         hide: function (e) {
             if(e.target.id != 'site_overlay') return
 
@@ -46,7 +46,7 @@ function _math_round(value, decimals) {
             $('body').removeClass('site_overlay_active')
             $('#site_overlay').removeClass('active')
             this.$element.removeClass('active')
-            
+
             //this.$element.trigger('hide', [e.currentTarget])
             if(this.options['hide'] != null) this.options['hide'](e.currentTarget, this.$element)
         }
@@ -59,7 +59,7 @@ function _math_round(value, decimals) {
             var modal = new vhmisModal($this, idModal, options)
         })
     }
-    
+
     $.fn.vhmisModal.defaults = {
         element: null,
         beforeShow: null,
@@ -67,7 +67,7 @@ function _math_round(value, decimals) {
         hide: null,
         url: null
     }
-    
+
 })(jQuery);
 
 $(document).ready(function () {
@@ -77,7 +77,7 @@ $(document).ready(function () {
             $('#ask_other_question').trigger('click')
         }
     })
-    
+
     // Menu
     $('.dropdown').hover(
         function () {
@@ -87,7 +87,7 @@ $(document).ready(function () {
             $(this).removeClass('open')
         }
     )
-    
+
     // Always top
     if(w_page != 'index') {
         $(window).scroll(function () {
@@ -98,7 +98,7 @@ $(document).ready(function () {
             }
         })
     }
-    
+
     // To top
     $(window).scroll(function () {
         if ($(window).scrollTop() > 200) {
@@ -334,7 +334,7 @@ $(document).ready(function () {
             form.addClass('has-error')
             return;
         }
-        
+
         form.find('.ketqua_k10').val(count_k.k10 == 0 ? '' : _math_round(sum_k.k10 / count_k.k10, 1))
         form.find('.ketqua_k11').val(count_k.k11 == 0 ? '' : _math_round(sum_k.k11 / count_k.k11, 1))
         form.find('.ketqua_k12').val(count_k.k12 == 0 ? '' : _math_round(sum_k.k12 / count_k.k12, 1))
@@ -361,13 +361,34 @@ $(document).ready(function () {
             me.find('button').prop('disabled', false);
         }, 'json')
     })
-    
+
+    $('form#xettuyen_ne').on('submit', function (e) {
+        e.preventDefault()
+        var me = $(this)
+        var data = me.serialize();
+        me.find('button').prop('disabled', true);
+        $.post('https://vhmis.viethanit.edu.vn/education/public-api/admission/ne-result/add', data, function (data) {
+            if (data.error == '0') {
+                alert('Cảm ơn bạn đã đăng ký xét tuyển vào trường Việt Hàn, chúng tôi sẽ liên lạc và thông báo kết quả sớm với bạn.')
+                me[0].reset();
+            } else {
+                if(data.error == '2') {
+                    console.log(data.form_error.code + "\n");
+                    console.log(data.form_error.message + "\n");
+                    console.log(data.form_error.field + "\n");
+                }
+                alert(data.message)
+            }
+            me.find('button').prop('disabled', false);
+        }, 'json')
+    })
+
     $('#ask_other_question').on('click', function(e) {
         e.preventDefault()
         $('#send_question_modal').find(".for_question").removeClass('hide')
         $('#send_question_modal').find(".for_response").addClass('hide')
     })
-    
+
     $('form#ask_question').on('submit', function(e) {
         e.preventDefault()
         var me = $(this)
@@ -389,7 +410,7 @@ $(document).ready(function () {
             me.find('button').prop('disabled', false);
         }, 'json')
     })
-    
+
     if(w_page == 'hoidap') {
         $.get('https://vhmis.viethanit.edu.vn/education/public-api/admission/questions', function (data) {
             $('div#question-list').html(data)
