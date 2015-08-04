@@ -561,3 +561,32 @@ body.site_overlay_active {
 .sectionfooter p a, .sectionfooter p a:active, .sectionfooter p a:hover, .sectionfooter p a:visited {
     color: #999;
 }
+
+/* List applied admission */
+.list-container {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.list-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #eee;
+}
+
+.list-row:hover {
+    background: #eee;
+}
+
+.list-row-header {
+    font-weight: bold;
+    /*padding-top: 20px;*/
+    color: #fff;
+    border-top: 0px;
+    /*padding-bottom: 20px;*/
+    background: #D9534F;
+}
+
+.list-row-header:hover {
+    background: #D9534F;
+}

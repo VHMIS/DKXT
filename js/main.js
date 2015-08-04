@@ -416,4 +416,10 @@ $(document).ready(function () {
             $('div#question-list').html(data)
         })
     }
+
+    if(w_page == 'xettuyen') {
+        $.get('https://vhmis.viethanit.edu.vn/education/public-api/admission/list-ne-result', function (data) {
+            $('div#admission-list').html(data)
+        })
+    }
 })
