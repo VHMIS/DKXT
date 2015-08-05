@@ -362,6 +362,48 @@ $(document).ready(function () {
         }, 'json')
     })
 
+    /* Form xét tuyển điểm thi */
+    $('form#xettuyen_ne select.chontohop').on('change', function (e) {
+        var me = $(this)
+        var form = me.parent().parent().parent()
+        var sub = {
+            sub_1: false,
+            sub_2: false,
+            sub_3: false,
+            sub_4: false,
+            sub_5: false
+        }
+
+        form.find('select.chontohop').each(function () {
+            var combination = $(this)
+
+            if (combination.val() != '') {
+                if(combination.val() == 'A00') {
+                    //$('form#xettuyen_ne input[name="sub_1"').prop('disabled', false)
+                    sub.sub_1 = true;
+                    sub.sub_2 = true;
+                    sub.sub_3 = true;
+                } else if(combination.val() == 'A01') {
+                    sub.sub_1 = true;
+                    sub.sub_2 = true;
+                    sub.sub_5 = true;
+                } else {
+                    sub.sub_1 = true;
+                    sub.sub_4 = true;
+                    sub.sub_5 = true;
+                }
+            }
+        })
+
+        $.each(sub, function (key, value) {
+            if(value) {
+                $('form#xettuyen_ne input[name=' + key + ']').prop('disabled', false)
+            } else {
+                $('form#xettuyen_ne input[name=' + key + ']').prop('disabled', true).val('')
+            }
+        })
+    })
+
     $('form#xettuyen_ne').on('submit', function (e) {
         e.preventDefault()
         var me = $(this)
