@@ -8,7 +8,7 @@ header_css: no-banner
             <div>
                 <ol class="breadcrumb">
                     <li><a href="{{ site.baseurl }}/index.html">Trang tuyển sinh 2015</a></li>
-                    <li class="active">Danh sách trúng tuyển nguyện vọng 1 theo kết quả thi</li>
+                    <li class="active">Danh sách trúng tuyển nguyện vọng 1 theo kết quả học bạ</li>
                 </ol>
             </div>
         </div>
@@ -17,7 +17,7 @@ header_css: no-banner
             <div class="row">
                 <div class="col-md-12">
                     <div class="block_component form_register">
-                        <h2>Danh sách trúng tuyển nguyện vọng 1 theo kết quả thi</h2>
+                        <h2>Danh sách trúng tuyển nguyện vọng 1 theo kết quả học bạ</h2>
                         <div class="list-container">
                             <div class="list-row list-row-header row">
                                 <div class="list-cell col-md-1">
@@ -27,37 +27,34 @@ header_css: no-banner
                                     Họ và tên
                                 </div>
                                 <div class="list-cell col-md-1">
-                                    SBD
-                                </div>
-                                <div class="list-cell col-md-1">
                                     Ngày sinh
                                 </div>
                                 <div class="list-cell col-md-1">
                                     Giới tính
                                 </div>
                                 <div class="list-cell col-md-1">
-                                    Điểm thi
+                                    Điểm TB
                                 </div>
                                 <div class="list-cell col-md-1">
-                                    Điểm ƯT
+                                    HK L10
                                 </div>
                                 <div class="list-cell col-md-1">
-                                    Tổng
+                                    HK L11
+                                </div>
+                                <div class="list-cell col-md-1">
+                                    HK L12
                                 </div>
                                 <div class="list-cell col-md-2">
                                     Ngành trúng tuyển
                                 </div>
                             </div>
-                            {% for ts in site.data.tt_nv1 %}
+                            {% for ts in site.data.tt_nv1_hb %}
                             <div class="list-row row">
                                 <div class="list-cell col-md-1">
                                     &nbsp;&nbsp;{{ ts.stt }}
                                 </div>
                                 <div class="list-cell col-md-2">
                                     {{ ts.ten }}
-                                </div>
-                                <div class="list-cell col-md-1">
-                                    {{ ts.sbd }}
                                 </div>
                                 <div class="list-cell col-md-1">
                                     {{ ts.ns }}
@@ -69,10 +66,13 @@ header_css: no-banner
                                     {{ ts.d }}
                                 </div>
                                 <div class="list-cell col-md-1">
-                                    {{ ts.ut }}
+                                    {{ ts.hk1 }}
                                 </div>
                                 <div class="list-cell col-md-1">
-                                    {{ ts.td }}
+                                    {{ ts.hk2 }}
+                                </div>
+                                <div class="list-cell col-md-1">
+                                    {{ ts.hk3 }}
                                 </div>
                                 <div class="list-cell col-md-3">
                                     {{ ts.n }}
