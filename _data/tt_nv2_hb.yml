@@ -2,7 +2,7 @@
     stt: 1
     ten: Nguyễn Mỹ Anh
     ns: 10/06/1997
-    gt: 2
+    gt: Nữ
     d: 5.5
     hk1: Tốt
     hk2: Tốt
@@ -12,7 +12,7 @@
     stt: 2
     ten: Trần Văn Anh
     ns: 18/11/1994
-    gt: 1
+    gt: Nam
     d: 7.2
     hk1: Tốt
     hk2: Tốt
@@ -22,7 +22,7 @@
     stt: 3
     ten: Trần Thị Ngọc Ánh
     ns: 22/11/1997
-    gt: 2
+    gt: Nữ
     d: 8
     hk1: Tốt
     hk2: Tốt
@@ -32,7 +32,7 @@
     stt: 4
     ten: Bùi Thị Xuân Đào
     ns: 27/11/1997
-    gt: 2
+    gt: Nữ
     d: 6.1
     hk1: Tốt
     hk2: Tốt
@@ -42,7 +42,7 @@
     stt: 5
     ten: Đào Nguyên Đạt
     ns: 18/11/1997
-    gt: 1
+    gt: Nam
     d: 5.7
     hk1: Tốt
     hk2: Khá
@@ -52,7 +52,7 @@
     stt: 6
     ten: Nguyễn Thị Mỹ Duyên
     ns: 25/10/1997
-    gt: 2
+    gt: Nữ
     d: 6.6
     hk1: Tốt
     hk2: Tốt
@@ -62,7 +62,7 @@
     stt: 7
     ten: Bùi Viết Hải
     ns: 05/10/1997
-    gt: 1
+    gt: Nam
     d: 7
     hk1: Khá
     hk2: Tốt
@@ -72,7 +72,7 @@
     stt: 8
     ten: Từ Vũ Hiếu
     ns: 27/01/1997
-    gt: 1
+    gt: Nam
     d: 8.300000000000001
     hk1: Tốt
     hk2: Tốt
@@ -82,7 +82,7 @@
     stt: 9
     ten: Đào Thị Minh Hiếu
     ns: 13/05/1997
-    gt: 2
+    gt: Nữ
     d: 5.6
     hk1: Tốt
     hk2: Khá
@@ -92,7 +92,7 @@
     stt: 10
     ten: Trang Sĩ Hiếu
     ns: 03/03/1995
-    gt: 1
+    gt: Nam
     d: 6.7
     hk1: Tốt
     hk2: Tốt
@@ -102,7 +102,7 @@
     stt: 11
     ten: Nguyễn Trọng Huy
     ns: 04/02/1997
-    gt: 1
+    gt: Nam
     d: 8
     hk1: Tốt
     hk2: Tốt
@@ -112,7 +112,7 @@
     stt: 12
     ten: Lê Huy
     ns: 06/01/1997
-    gt: 1
+    gt: Nam
     d: 7.5
     hk1: Tốt
     hk2: Tốt
@@ -122,7 +122,7 @@
     stt: 13
     ten: Trần Phước Khải
     ns: 05/07/1997
-    gt: 1
+    gt: Nam
     d: 5.9
     hk1: Tốt
     hk2: Tốt
@@ -132,7 +132,7 @@
     stt: 14
     ten: Huỳnh Thị Mỹ Linh
     ns: 22/08/1996
-    gt: 2
+    gt: Nữ
     d: 5.8
     hk1: Tốt
     hk2: Tốt
@@ -142,7 +142,7 @@
     stt: 15
     ten: Nguyễn Hoàng Long
     ns: 21/10/1997
-    gt: 1
+    gt: Nam
     d: 7.2
     hk1: Tốt
     hk2: Tốt
@@ -152,7 +152,7 @@
     stt: 16
     ten: Đỗ Bình Minh
     ns: 31/12/1996
-    gt: 2
+    gt: Nữ
     d: 6.4
     hk1: Tốt
     hk2: Tốt
@@ -162,7 +162,7 @@
     stt: 17
     ten: Hồ Thị Trà My
     ns: 15/09/1997
-    gt: 2
+    gt: Nữ
     d: 6
     hk1: Tốt
     hk2: Tốt
@@ -172,7 +172,7 @@
     stt: 18
     ten: Lê Nguyễn Phương Nam
     ns: 04/09/1996
-    gt: 1
+    gt: Nam
     d: 5.6
     hk1: Tốt
     hk2: Khá
@@ -182,7 +182,7 @@
     stt: 19
     ten: Bùi Thị Bích Ngọc
     ns: 25/02/1997
-    gt: 2
+    gt: Nữ
     d: 5.6
     hk1: Tốt
     hk2: Tốt
@@ -192,7 +192,7 @@
     stt: 20
     ten: Hoàng Thanh Nha
     ns: 29/09/1997
-    gt: 2
+    gt: Nữ
     d: 6.1
     hk1: Tốt
     hk2: Tốt
@@ -202,7 +202,7 @@
     stt: 21
     ten: Nguyễn Thị Lệ Quyên
     ns: 12/03/1996
-    gt: 2
+    gt: Nữ
     d: 6.5
     hk1: Tốt
     hk2: Tốt
@@ -212,7 +212,7 @@
     stt: 22
     ten: Phạm Văn Sanh
     ns: 09/05/1996
-    gt: 1
+    gt: Nam
     d: 6.4
     hk1: Khá
     hk2: Tốt
@@ -222,7 +222,7 @@
     stt: 23
     ten: Đinh Ngọc Sơn
     ns: 18/04/1997
-    gt: 1
+    gt: Nam
     d: 6
     hk1: Khá
     hk2: Khá
@@ -232,7 +232,7 @@
     stt: 24
     ten: Nguyễn Công Thắng
     ns: 15/10/1996
-    gt: 1
+    gt: Nam
     d: 6.5
     hk1: Tốt
     hk2: Tốt
@@ -242,7 +242,7 @@
     stt: 25
     ten: Hồ Ngọc Thắng
     ns: 19/08/1996
-    gt: 1
+    gt: Nam
     d: 5.5
     hk1: Khá
     hk2: Khá
@@ -252,7 +252,7 @@
     stt: 26
     ten: Mai Văn Thịnh
     ns: 01/08/1997
-    gt: 1
+    gt: Nam
     d: 6.8
     hk1: Tốt
     hk2: Tốt
@@ -262,7 +262,7 @@
     stt: 27
     ten: Lê Minh Tiến
     ns: 24/10/1990
-    gt: 1
+    gt: Nam
     d: 6.3
     hk1: Tốt
     hk2: Tốt
@@ -272,7 +272,7 @@
     stt: 28
     ten: Lê Thị Kim Trúc
     ns: 20/01/1997
-    gt: 2
+    gt: Nữ
     d: 6.1
     hk1: Tốt
     hk2: Tốt
@@ -282,7 +282,7 @@
     stt: 29
     ten: Trần Anh Tuấn
     ns: 29/09/1997
-    gt: 1
+    gt: Nam
     d: 6.5
     hk1: Tốt
     hk2: Tốt
@@ -292,7 +292,7 @@
     stt: 30
     ten: Trương Thanh Tùng
     ns: 01/01/1997
-    gt: 1
+    gt: Nam
     d: 5.8
     hk1: Tốt
     hk2: Khá
@@ -302,7 +302,7 @@
     stt: 31
     ten: Cao Đình Tường
     ns: 30/06/1997
-    gt: 1
+    gt: Nam
     d: 6.6
     hk1: Tốt
     hk2: Tốt
@@ -312,7 +312,7 @@
     stt: 32
     ten: Trần Đình Vương
     ns: 23/05/1997
-    gt: 1
+    gt: Nam
     d: 7.6
     hk1: Tốt
     hk2: Tốt
@@ -322,7 +322,7 @@
     stt: 33
     ten: Đỗ Tiến Vương
     ns: 20/10/1995
-    gt: 1
+    gt: Nam
     d: 6.3
     hk1: Tốt
     hk2: Tốt
