@@ -1,5 +1,5 @@
-# Website tuyển sinh 2015
-Website tuyển sinh 2015 của trường CĐ Công nghệ thông tin Hữu nghị Việt Hàn
+# Website tuyển sinh 2016
+Website tuyển sinh 2016 của trường CĐ Công nghệ thông tin Hữu nghị Việt Hàn
 ## Địa chỉ
 http://viethanit.edu.vn/tuyensinh/
 ## Build
